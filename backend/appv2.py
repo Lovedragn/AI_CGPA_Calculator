@@ -32,7 +32,6 @@ def calculate_cgpa():
         try:
             result = starter(file_path)
 
-            
             return jsonify(result)
         except Exception as e:
             return jsonify({"error": str(e)}), 500

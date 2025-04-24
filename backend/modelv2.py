@@ -88,8 +88,8 @@ def parse_student_data(text):
     lines = text.split('\n')
 
     student_info = {
-        "Student Name": "Unknown",
-        "Register Number": "Unknown",
+        "Student_Name": "Unknown",
+        "Register_Number": "Unknown",
         "Branch": "Unknown",
         "D.O.B": "Unknown"
     }
@@ -101,11 +101,11 @@ def parse_student_data(text):
 
         # Extract Student Info
         if "Student Name" in line and i + 1 < len(lines):
-            student_info['Student Name'] = lines[i + 1].lstrip(':').strip()
+            student_info['Student_Name'] = lines[i + 1].lstrip(':').strip()
         elif "Register Number" in line:
             match = re.search(r'Register Number\s*[:\-]?\s*(\d{12})', line)
             if match:
-                student_info['Register Number'] = match.group(1)
+                student_info['Register_Number'] = match.group(1)
         elif "Branch" in line and i + 1 < len(lines):
             student_info['Branch'] = lines[i + 1].strip(": ")
         elif "D.O.B" in line:
@@ -141,8 +141,8 @@ def parse_anna_university_data(text):
     lines = text.split('\n')
 
     student_info = {
-        "Student Name": "Unknown",
-        "Register Number": "Unknown",
+        "Student_Name": "Unknown",
+        "Register_Number": "Unknown",
         "Branch": "Unknown",
         "D.O.B": "Unknown"
     }
@@ -154,11 +154,11 @@ def parse_anna_university_data(text):
 
         # Extract Student Info
         if "Student Name" in line and i + 1 < len(lines):
-            student_info['Student Name'] = lines[i + 1].lstrip(':').strip()
+            student_info['Student_Name'] = lines[i + 1].lstrip(':').strip()
         elif "Register Number" in line:
             match = re.search(r'Register Number\s*[:\-]?\s*(\d{12})', line)
             if match:
-                student_info['Register Number'] = match.group(1)
+                student_info['Register_Number'] = match.group(1)
         elif "Branch" in line and i + 1 < len(lines):
             student_info['Branch'] = lines[i + 1].strip(": ")
         elif "D.O.B" in line:
