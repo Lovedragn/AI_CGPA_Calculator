@@ -1,0 +1,1451 @@
+[
+    {
+      "SUBJECT_CODE": "CY24101",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "GE24101",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "GE24102",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "HS24101",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "HS24102",
+      "CREDITS": 1
+    },
+    {
+      "SUBJECT_CODE": "MA24101",
+      "CREDITS": 4
+    },
+    {
+      "SUBJECT_CODE": "PC24101",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "PH24101",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "TA24101",
+      "CREDITS": 1
+    },
+    {
+      "SUBJECT_CODE": "HS315",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "MA3151",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CY3151",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "GE3152",
+      "CREDITS": 1
+    },
+    {
+      "SUBJECT_CODE": "HS325",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "MA3251",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "PH3256",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "GE3251",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CS3251",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "MA3354",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CS3452",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CS3401",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CS3591",
+      "CREDITS": 4
+    },
+    {
+      "SUBJECT_CODE": "CS3551",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CS3691",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "GE3751",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "GE3752",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "GE3755",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "GE3792",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "MX3082",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "MX3083",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "MX3089",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CCS360",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS369",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCW331",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS349",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS338",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS334",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS375",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS332",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS370",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS374",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS342",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS335",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS372",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS341",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS367",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CCS365",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS368",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS344",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS351",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS354",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS352",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS371",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS370",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCW332",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS373",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS347",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS340",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS359",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS347",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS331",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS350",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS364",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS369",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS357",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS348",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS337",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS345",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "OAS351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OBT351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OMA351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OMG351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OFD351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "AI3021",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OAE351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OME354",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "MF3003",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OPR351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "AU3791",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OAS352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OIM351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OIE354",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OSF351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OMR351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "ORA351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OGI351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OAI351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OEE352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OCH351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OCH352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OFD352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OFD353",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OPY352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OTT351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OTT353",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OPT351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OEC351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CBM333",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OMA352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OMA353",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OMA354",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OBT353",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OHS352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OMA356",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OMG355",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OME352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CME343",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "AU3008",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OAS353",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OIM352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OIE353",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OSF352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OSF353",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OMR352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OMR353",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "ORA352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "MV3501",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OMV351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CRA332",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OEN352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OCH353",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OCH354",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OPY353",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OTT354",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "FT3201",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OPE353",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OEC353",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CBM370",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CBM356",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OBT356",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OBT357",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CMG331",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CMG336",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CMG344",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CMG346",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CMG354",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CES333",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CES335",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "PH3151",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "GE3151",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "HS325",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "MA3251",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "PH3256",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "BE3251",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "GE3251",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CS3251",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "GE3252",
+      "CREDITS": 1
+    },
+    {
+      "SUBJECT_CODE": "NX3251",
+      "CREDITS": 1
+    },
+    {
+      "SUBJECT_CODE": "NX3252",
+      "CREDITS": 1
+    },
+    {
+      "SUBJECT_CODE": "NX3253",
+      "CREDITS": 1
+    },
+    {
+      "SUBJECT_CODE": "MA3354",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CS335",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CS330",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CS3391",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CS3452",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CS3491",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CS3492",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CS3401",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CS3451",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "GE3451",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "NX3451",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "NX3452",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "NX3453",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CS3501",
+      "CREDITS": 4
+    },
+    {
+      "SUBJECT_CODE": "CB3491",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CS3551",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CCS356",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CS3691",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "NX3651",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "NX3652",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "NX3653",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "GE3791",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS346",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CCS360",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS355",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS369",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCW331",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS349",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS338",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS334",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS375",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS332",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS336",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS370",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS366",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CCS374",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS342",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS358",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CCS335",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS372",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS341",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS367",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CCS365",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS368",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS344",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS343",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS351",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CB3591",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS339",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS354",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS333",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS352",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS371",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCW332",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS373",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS347",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS353",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS361",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS340",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS359",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS331",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS350",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS364",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS357",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS348",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS337",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "CCS345",
+      "CREDITS": 2
+    },
+    {
+      "SUBJECT_CODE": "TS16949",
+      "CREDITS": 9000
+    },
+    {
+      "SUBJECT_CODE": "GE3753",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "GE3754",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "GE3792",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "MX3081",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "MX3082",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "MX3083",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "MX3084",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "MX3086",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "MX3087",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "MX3088",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "MX3089",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OAS351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OIE351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OBT351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OCE351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OEE351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OMA351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OIE352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OMG351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OFD351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "AI3021",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OEI352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OPY351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OAE351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OHS351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OMG352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OMG353",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CME365",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OME354",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "MF3003",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OPR351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "AU3791",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OAS352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OIM351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OIE354",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OSF351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OML351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OMR351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "ORA351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OAE352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OGI351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OAI351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OEN351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OEE352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OEI353",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OCH351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OCH352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OFD352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OFD353",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OPY352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OTT351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OTT352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OTT353",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CPE334",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OPT351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OEC351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OEC352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CBM348",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CBM333",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OMA352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OMA353",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OMA354",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OCE353",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OBT352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OBT353",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OBT354",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OHS352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OMA355",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OMA356",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OMA357",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OMG355",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OME352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CME343",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OME355",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "MF3010",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OMF354",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "AU3002",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "AU3008",
+      "CREDITS": 3003
+    },
+    {
+      "SUBJECT_CODE": "OAS353",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OIM352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OIM353",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OIE353",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OSF352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OSF353",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OML352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OML353",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OMR352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OMR353",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "ORA352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "MV3501",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OMV351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OMV352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CRA332",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OGI352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OAI352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OEN352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OEE353",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OEI354",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OCH353",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OCH354",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OFD354",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OFD355",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OPY353",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "FT3201",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OTT355",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OPE353",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OPE354",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OPT352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OPT353",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OEC353",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CBM356",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OCE354",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OBT355",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OBT356",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "OBT357",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CMG331",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CMG332",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CMG333",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CMG334",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CMG335",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CMG336",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CMG337",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CMG338",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CMG339",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CMG340",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CMG341",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CMG342",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CMG343",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CMG345",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CMG346",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CMG347",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CMG348",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CMG349",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CMG350",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CMG351",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CMG352",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CMG353",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CMG354",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CES331",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CES333",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CES334",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CES335",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CES336",
+      "CREDITS": 3
+    },
+    {
+      "SUBJECT_CODE": "CES338",
+      "CREDITS": 3
+    }
+  ]
+  
