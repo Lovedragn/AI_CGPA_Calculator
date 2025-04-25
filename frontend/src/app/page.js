@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Navmenu from "../components/Base/navmenu";
+import { FileUpload } from "@/components/ui/file-upload";
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -136,6 +137,10 @@ const App = () => {
   <div>
   <Navmenu/>
     
+  </div>
+  <div>
+
+  <FileUpload/>
   </div>
        
     </div>
