@@ -1,103 +1,140 @@
-import Image from "next/image";
+"use client"
+import { useState } from "react";
 
-export default function Home() {
+const App = () => {
+  const [loading, setLoading] = useState(false);
+  const [file, setFile] = useState(null);
+  const [results, setResults] = useState(null);
+  const [error, setError] = useState(null);
+
+  const uploadFile = async () => {
+    if (!file) return alert("Please select a file to upload.");
+
+    setLoading(true);
+    setError(null);
+
+    const formData = new FormData();
+    formData.append("file", file);
+
+    try {
+      const res = await fetch("http://localhost:5000/calculate-cgpa", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (!res.ok) {
+        const errorData = await res.json();
+        throw new Error(errorData.error || "Failed to process file");
+      }
+
+      const result = await res.json();
+      setResults(result);
+    } catch (error) {
+      console.error("Upload error:", error);
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="bg-gradient-to-b from-blue-400 to-blue-600 w-full h-screen flex flex-col justify-center items-center p-4">
+      <div className="bg-white rounded-lg shadow-xl p-8 max-w-md w-full">
+        
+        
+          <input
+            className="w-full border border-gray-300 rounded p-2 text-sm"
+            type="file"
+            accept=".pdf,.png,.jpg,.jpeg"
+            onChange={(e) => setFile(e.target.files[0])}
+          />
+        
+        <button
+          className={`w-full py-2 px-4 rounded font-medium ${
+            loading
+              ? "bg-gray-400 cursor-not-allowed"
+              : "bg-blue-500 hover:bg-blue-600 text-white"
+          }`}
+          onClick={uploadFile}
+          disabled={loading || !file}
+        >
+          {loading ? "Processing..." : "Calculate CGPA"}
+        </button>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        {error && (
+          <div className="mt-4 p-3 bg-red-100 border-l-4 border-red-500 text-red-700">
+            <p>{"Upload a Valid PDF Result"}</p>
+          </div>
+        )}
+
+        {results && (
+          <div className="mt-6 p-4 bg-gray-50 rounded-lg">
+            <div className="text-center mb-4">
+              <span className="text-gray-600 text-sm">Your CGPA</span>
+              <h2 className="text-5xl font-bold text-blue-600">
+                {results.cgpa}
+              </h2>
+              <p className="text-sm mt-1 text-gray-500">
+                {results.college === "anna_university"
+                  ? "Anna University"
+                  : "GRT IET"}
+              </p>
+            </div>
+
+            {results.student_info && (
+              <div className="mb-4 border-t pt-4">
+                <h3 className="font-medium text-gray-700 mb-2">
+                  Student Information
+                </h3>
+                <p className="text-sm">
+                  <span className="font-medium">Name:</span>{" "}
+                  {results.student_info.Student_Name || "N/A"}
+                </p>
+                <p className="text-sm">
+                  <span className="font-medium">Register Number:</span>{" "}
+                  {results.student_info.Register_Number || "N/A"}
+                </p>
+                <p className="text-sm">
+                  <span className="font-medium">Branch:</span>{" "}
+                  {results.student_info.Branch || "N/A"}
+                </p>
+              </div>
+            )}
+
+            {results.courses && results.courses.length > 0 && (
+              <div className="border-t pt-4">
+                <h3 className="font-medium text-gray-700 mb-2">Course Details</h3>
+                <div className="text-sm max-h-40 overflow-y-auto">
+                  <table className="min-w-full">
+                    <thead>
+                      <tr className="bg-gray-100">
+                        <th className="text-left p-1">Code</th>
+                        <th className="text-left p-1">Grade</th>
+                        <th className="text-right p-1">Credits</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {results.courses.map((course, index) => (
+                        <tr key={index} className="border-b">
+                          <td className="p-1">{course.Course_Code}</td>
+                          <td className="p-1">{course.Grade}</td>
+                          <td className="p-1 text-right">{course.Credits}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+
+      <p className="text-white text-xs mt-4">
+        GPA Calculator | Anna University & GRT IET
+      </p>
     </div>
   );
-}
+};
+
+export default App;
