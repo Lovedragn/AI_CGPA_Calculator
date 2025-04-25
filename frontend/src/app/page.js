@@ -1,5 +1,6 @@
-"use client"
+"use client";
 import { useState } from "react";
+import Navmenu from "../components/Base/navmenu";
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -38,17 +39,15 @@ const App = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-blue-400 to-blue-600 w-full h-screen flex flex-col justify-center items-center p-4">
-      <div className="bg-white rounded-lg shadow-xl p-8 max-w-md w-full">
-        
-        
-          <input
-            className="w-full border border-gray-300 rounded p-2 text-sm"
-            type="file"
-            accept=".pdf,.png,.jpg,.jpeg"
-            onChange={(e) => setFile(e.target.files[0])}
-          />
-        
+    <div className="bg-gradient-to-b from-black to-neutral-900 w-full h-screen flex flex-col items-center p-4 overflow-hidden">
+      {/* <div className="bg-white rounded-lg shadow-xl p-8 max-w-md w-full">
+        <input
+          className="w-full border border-gray-300 rounded p-2 text-sm"
+          type="file"
+          accept=".pdf,.png,.jpg,.jpeg"
+          onChange={(e) => setFile(e.target.files[0])}
+        />
+
         <button
           className={`w-full py-2 px-4 rounded font-medium ${
             loading
@@ -103,7 +102,9 @@ const App = () => {
 
             {results.courses && results.courses.length > 0 && (
               <div className="border-t pt-4">
-                <h3 className="font-medium text-gray-700 mb-2">Course Details</h3>
+                <h3 className="font-medium text-gray-700 mb-2">
+                  Course Details
+                </h3>
                 <div className="text-sm max-h-40 overflow-y-auto">
                   <table className="min-w-full">
                     <thead>
@@ -130,9 +131,13 @@ const App = () => {
         )}
       </div>
 
-      <p className="text-white text-xs mt-4">
-        GPA Calculator | Anna University & GRT IET
-      </p>
+       */}
+
+  <div>
+  <Navmenu/>
+    
+  </div>
+       
     </div>
   );
 };
