@@ -1,14 +1,14 @@
 "use client";
 import { useState } from "react";
 import Navmenu from "../components/Base/navmenu";
-import { FileUpload } from "@/components/ui/file-upload";
+import Tableform from "../components/Base/table";
+import Fileuploads from "@/components/Base/fileupload";
 
 const App = () => {
+  const [results, setResults] = useState(null);
   const [loading, setLoading] = useState(false);
   const [file, setFile] = useState(null);
-  const [results, setResults] = useState(null);
   const [error, setError] = useState(null);
-
   const uploadFile = async () => {
     if (!file) return alert("Please select a file to upload.");
 
@@ -41,7 +41,7 @@ const App = () => {
 
   return (
     <div className="bg-gradient-to-b from-black to-neutral-900 w-full h-screen flex flex-col items-center p-4 overflow-hidden">
-      {/* <div className="bg-white rounded-lg shadow-xl p-8 max-w-md w-full">
+     {/* <div className="bg-white rounded-lg shadow-xl p-8 max-w-md w-full">
         <input
           className="w-full border border-gray-300 rounded p-2 text-sm"
           type="file"
@@ -127,22 +127,20 @@ const App = () => {
                   </table>
                 </div>
               </div>
-            )}
+            )} 
           </div>
         )}
+      </div> */}
+
+      <div>
+        <Navmenu />
       </div>
-
-       */}
-
-  <div>
-  <Navmenu/>
-    
-  </div>
-  <div>
-
-  <FileUpload/>
-  </div>
-       
+      <div>
+        <Fileuploads/>
+      </div>
+      <div>
+        <Tableform result={results} />
+      </div>
     </div>
   );
 };
