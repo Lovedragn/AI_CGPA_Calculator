@@ -57,23 +57,22 @@ export function Navmenu() {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
-          <NavigationMenuContent>
+          <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
+          <NavigationMenuContent className="bg-gradient-to-tr from-black to-zinc-900">
             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
-                  <a
+                  <Link
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-zinc-900 to-zinc-800 p-6 no-underline outline-none focus:shadow-md"
                     href="/"
                   >
                     <div className="mb-2 mt-4 text-lg font-medium">
-                      shadcn/ui
+                      Layout Design
                     </div>
-                    <p className="text-sm leading-tight text-muted-foreground">
-                      Beautifully designed components built with Radix UI and
-                      Tailwind CSS.
+                    <p className="text-sm leading-tight  text-muted-foreground">
+                      Beautifully designed user friendly UI for fast access.
                     </p>
-                  </a>
+                  </Link>
                 </NavigationMenuLink>
               </li>
               <ListItem href="/docs" title="Introduction">
@@ -90,7 +89,7 @@ export function Navmenu() {
         </NavigationMenuItem>
         <NavigationMenuItem >
           <NavigationMenuTrigger>Components</NavigationMenuTrigger>
-          <NavigationMenuContent>
+          <NavigationMenuContent className="bg-gradient-to-tr from-black to-zinc-900   ">
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
               {components.map((component) => (
                 <ListItem
@@ -105,8 +104,10 @@ export function Navmenu() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+          <NavigationMenuLink className={navigationMenuTriggerStyle() }>
+            <Link href={"https://github.com/Lovedragn"}>
             Visit
+            </Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>

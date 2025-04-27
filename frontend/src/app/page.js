@@ -41,32 +41,37 @@ const App = ({ outerfile }) => {
     }
   };
   return (
-    <div className="bg-gradient-to-b from-black to-zinc-900 w-full h-screen flex flex-col items-center p-4 overflow-hidden">
-      <div>
-        <Navmenu />
-      </div>
-
-      <Fileuploads setFile={setFile} />
-      <Button
-        className={`${Loading ? "bg-gray-400 cursor-not-allowed" : ""}`}
-        onClick={uploadFile}
-        disabled={Loading || !file}
-      >
-        Upload
-      </Button>
-      {error && (
-        <div className="mt-4 p-3 bg-red-100 border-l-4 border-red-500 text-red-700">
-          <p>{"Upload a Valid PDF Result"}</p>
+    <div className="flex flex-col items-center w-full h-screen p-7  gap-10 bg-gradient-to-b  from-black to-zinc-950  overflow-hidden">
+      <div className="flex flex-col bg-gradient-to-b items-center gap-10 from-black to-zinc-950 w-full max-w-[1200px] min-w-[300px] h-screen">
+        <div className="flex w-full h-max">
+          <Navmenu />
         </div>
-      )}
-      <h2 className="text-5xl font-bold text-blue-600">
-        {results ? <h1 className="text-9xl text-white text-shadow-border">{results.cgpa}</h1> : ""}
-       
-      </h2>
-      <div>
+
+        <Fileuploads setFile={setFile} />
+
+        {results ? (
+          <h1 className="text-9xl text-white text-shadow-border">
+            {results.cgpa}
+          </h1>
+        ) : (
+          ""
+        )}
+
+        <Button
+          className={`${Loading ? "bg-gray-400 cursor-not-allowed" : ""}`}
+          onClick={uploadFile}
+          disabled={Loading || !file}
+        >
+          Upload
+        </Button>
+        {error && (
+          <div className="mt-4 p-3 bg-red-100 border-l-4 border-red-500 text-red-700">
+            <p>{"Upload a Valid PDF Result"}</p>
+          </div>
+        )}
+
         <Drawers result={results} />
       </div>
-     
     </div>
   );
 };
