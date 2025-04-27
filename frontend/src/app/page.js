@@ -3,13 +3,14 @@ import { useState } from "react";
 import Navmenu from "../components/Base/navmenu";
 import Fileuploads from "@/components/Base/fileupload";
 import { Drawers } from "@/components/Base/drawer";
+import { Button } from "@/components/ui/button";
 
-const App = ({outerfile}) => {
+const App = ({ outerfile }) => {
   const [results, setResults] = useState(null);
-  const [loading, setLoading] = useState(false);
   const [file, setFile] = useState(outerfile);
+  const [loading, isloading] = useState(false);
   const [error, setError] = useState(null);
- 
+
   const uploadFile = async () => {
     if (!file) return alert("Please select a file to upload.");
 
@@ -41,12 +42,14 @@ const App = ({outerfile}) => {
   };
   return (
     <div className="bg-gradient-to-b from-black to-zinc-700 w-full h-screen flex flex-col items-center p-4 overflow-hidden">
-       <div>
+      <div>
         <Navmenu />
       </div>
 
       <Fileuploads setFile={setFile} />
-      
+      <Button className={`${loading ? "bg-gray-400 cursor-not-allowed" : ""}`}>
+        Upload
+      </Button>
       <div>
         <Drawers result={results} />
       </div>
@@ -67,7 +70,6 @@ const App = ({outerfile}) => {
           onClick={uploadFile}
           disabled={loading || !file}
         >
-          {loading ? "Processing..." : "Calculate CGPA"}
         </button>
 
         {error && (
