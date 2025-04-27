@@ -27,7 +27,7 @@ export function Drawers({result}) {
         <DrawerContent>
           <div className="mx-auto w-full max-w-sm">
            
-              <DrawerTitle className="text-3xl font-bold text-center mt-3">Mark Allocation</DrawerTitle>
+              <DrawerTitle className="text-3xl font-bold text-center mt-3 text-zinc-600">Mark Allocation</DrawerTitle>
         
             <div className="p-4">
               <div className=" pb-1">

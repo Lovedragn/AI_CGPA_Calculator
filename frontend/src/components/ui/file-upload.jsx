@@ -58,7 +58,8 @@ export const FileUpload = ({
         <input
           ref={fileInputRef}
           id="file-upload-handle"
-          type="file"
+          type="file"  
+          accept=".pdf,.png,.jpg,.jpeg"
           onChange={(e) => handleFileChange(Array.from(e.target.files || []))}
           className="hidden" />
         <div
@@ -66,13 +67,10 @@ export const FileUpload = ({
           <GridPattern />
         </div>
         <div className="flex flex-col items-center justify-center">
-          <p
-            className="relative z-20 font-sans font-bold text-neutral-300 text-base">
-            Upload file
-          </p>
+          
           <p
             className="relative z-20 font-sans font-normal text-neutral-400 text-base mt-2">
-            Drag or drop your files here or click to upload
+            <span className="font-bold text-white ">Upload</span> your files here
           </p>
           <div className="relative w-full mt-10 max-w-xl mx-auto">
             {files.length > 0 &&

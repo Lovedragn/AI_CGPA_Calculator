@@ -1,18 +1,17 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { FileUpload } from "@/components/ui/file-upload";
 
-export function Fileuploads() {
-  const [files, setFiles] = useState([]);
+export function Fileuploads({ setFile }) {
   const handleFileUpload = (files) => {
-    setFiles(files);
-    console.log(files);
+    // Assuming you select only one file
+    setFile(files[0]); 
   };
 
   return (
-    <div
-      className="w-full max-w-4xl mx-auto border border-dashed bg-black rounded-xl">
+    <div className="w-full max-w-4xl mx-auto border border-dashed bg-black rounded-xl">
       <FileUpload onChange={handleFileUpload} />
+     
     </div>
   );
 }
