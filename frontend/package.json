@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.11",
     "@radix-ui/react-navigation-menu": "^1.2.10",
+    "@radix-ui/react-slot": "^1.2.0",
     "@tabler/icons-react": "^3.31.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -19,7 +21,9 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-dropzone": "^14.3.8",
-    "tailwind-merge": "^3.2.0"
+    "recharts": "^2.15.3",
+    "tailwind-merge": "^3.2.0",
+    "vaul": "^1.1.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

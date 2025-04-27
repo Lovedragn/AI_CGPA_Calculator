@@ -11,7 +11,7 @@ export function Fileuploads() {
 
   return (
     <div
-      className="w-full max-w-4xl mx-auto min-h-96 border border-dashed bg-black border-neutral-200 rounded-lg">
+      className="w-full max-w-4xl mx-auto border border-dashed bg-black rounded-xl">
       <FileUpload onChange={handleFileUpload} />
     </div>
   );

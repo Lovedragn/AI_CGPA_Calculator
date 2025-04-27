@@ -10,7 +10,6 @@ import {
 } from "@/components/ui/table";
 
 export function Tableform({ result }) {
-  console.log(result);
   return (
     <Table>
       <TableHeader className="bg-zinc-800">

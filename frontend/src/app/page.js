@@ -3,6 +3,7 @@ import { useState } from "react";
 import Navmenu from "../components/Base/navmenu";
 import Tableform from "../components/Base/table";
 import Fileuploads from "@/components/Base/fileupload";
+import { Drawers } from "@/components/Base/drawer";
 
 const App = () => {
   const [results, setResults] = useState(null);
@@ -40,7 +41,17 @@ const App = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-black to-neutral-900 w-full h-screen flex flex-col items-center p-4 overflow-hidden">
+    <div className="bg-gradient-to-b from-black to-zinc-700 w-full h-screen flex flex-col items-center p-4 overflow-hidden">
+      
+      <div>
+        <Navmenu />
+      </div>
+        <Fileuploads/>
+      
+      
+      <div>
+        <Drawers result = {results}/>
+      </div>
      {/* <div className="bg-white rounded-lg shadow-xl p-8 max-w-md w-full">
         <input
           className="w-full border border-gray-300 rounded p-2 text-sm"
@@ -132,15 +143,6 @@ const App = () => {
         )}
       </div> */}
 
-      <div>
-        <Navmenu />
-      </div>
-      <div>
-        <Fileuploads/>
-      </div>
-      <div>
-        <Tableform result={results} />
-      </div>
     </div>
   );
 };
