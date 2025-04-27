@@ -61,6 +61,7 @@ const App = ({ outerfile }) => {
           className={`${Loading ? "bg-gray-400 cursor-not-allowed" : ""}`}
           onClick={uploadFile}
           disabled={Loading || !file}
+          
         >
           Upload
         </Button>
