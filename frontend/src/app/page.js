@@ -5,6 +5,9 @@ import Fileuploads from "@/components/Base/fileupload";
 import { Drawers } from "@/components/Base/drawer";
 import { Button } from "@/components/ui/button";
 
+// Load the backend URL from the environment variable
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+
 const App = ({ outerfile }) => {
   const [results, setResults] = useState(null);
   const [file, setFile] = useState(outerfile);
@@ -21,7 +24,7 @@ const App = ({ outerfile }) => {
     formData.append("file", file);
 
     try {
-      const res = await fetch("http://localhost:5000/calculate-cgpa", {
+      const res = await fetch(`${API_URL}/calculate-cgpa`, {
         method: "POST",
         body: formData,
       });
@@ -40,9 +43,10 @@ const App = ({ outerfile }) => {
       setLoading(false);
     }
   };
+
   return (
-    <div className="flex flex-col items-center w-full h-screen p-7  gap-10 bg-gradient-to-b  from-black to-zinc-950  overflow-hidden">
-      <div className="flex flex-col gap-5 bg-gradient-to-b  items-center from-black to-zinc-950 w-full max-w-[1200px] min-w-[300px] h-screen max-h-[1080px]">
+    <div className="flex flex-col items-center w-full h-screen p-7 gap-10 bg-gradient-to-b from-black to-zinc-950 overflow-hidden">
+      <div className="flex flex-col gap-5 bg-gradient-to-b items-center from-black to-zinc-950 w-full max-w-[1200px] min-w-[300px] h-screen max-h-[1080px]">
         <div className="flex w-full justify-start">
           <Navmenu />
         </div>
