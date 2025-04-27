@@ -32,9 +32,10 @@ export const FileUpload = ({
   const fileInputRef = useRef(null);
 
   const handleFileChange = (newFiles) => {
-    setFiles((prevFiles) => [...prevFiles, ...newFiles]);
-    onChange && onChange(newFiles);
+    setFiles(newFiles); // replace old files
+    onChange && onChange(newFiles[0]);
   };
+  
 
   const handleClick = () => {
     fileInputRef.current?.click();

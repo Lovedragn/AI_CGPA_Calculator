@@ -49,7 +49,6 @@ def starter(file_path):
         "Courses": final_courses,
         "Student Info": data["Student Info"]
     }
-    print(final_courses)
     
     # Calculate CGPA
     final_result = calculate_cgpa(final_data)
