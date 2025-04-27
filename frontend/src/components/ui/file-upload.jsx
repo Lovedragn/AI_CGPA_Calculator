@@ -80,7 +80,7 @@ export const FileUpload = ({
                   key={"file" + idx}
                   layoutId={idx === 0 ? "file-upload" : "file-upload-" + idx}
                   className={cn(
-                    "relative overflow-hidden z-40 bg-neutral-900 flex flex-col items-start justify-start md:h-24 p-4 mt-4 w-full mx-auto rounded-md",
+                    "relative overflow-hidden z-40 bg-zinc-900 flex flex-col items-start justify-start md:h-24 p-4 mt-4 w-full mx-auto rounded-md",
                     "shadow-sm"
                   )}>
                   <div className="flex justify-between w-full items-center gap-4">
@@ -123,8 +123,8 @@ export const FileUpload = ({
                 variants={mainVariant}
                 transition={{
                   type: "spring",
-                  stiffness: 300,
-                  damping: 20,
+                  stiffness: 800,
+                  damping: 70,
                 }}
                 className={cn(
                   "relative group-hover/file:shadow-2xl z-40 bg-neutral-900 flex items-center justify-center h-32 mt-4 w-full max-w-[8rem] mx-auto rounded-md",
@@ -161,7 +161,7 @@ export function GridPattern() {
   const rows = 11;
   return (
     <div
-      className="flex bg-neutral-900 shrink-0 flex-wrap justify-center items-center gap-x-px gap-y-px  scale-105">
+      className="flex bg-neutral-800 shrink-0 flex-wrap justify-center items-center gap-x-px gap-y-px  scale-105">
       {Array.from({ length: rows }).map((_, row) =>
         Array.from({ length: columns }).map((_, col) => {
           const index = row * columns + col;
