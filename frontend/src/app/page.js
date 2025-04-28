@@ -46,8 +46,8 @@ const App = ({ outerfile }) => {
   };
 
   return (
-    <div className="flex flex-col items-center w-full h-screen justify-between p-7 gap-10 bg-gradient-to-tr from-black to-zinc-900 overflow-hidden">
-      <div className="flex flex-col gap-5 bg-gradient-to-tr items-center from-black to-zinc-900 w-full max-w-[1200px] min-w-[300px] max-h-[1080px]">
+    <div className="flex flex-col items-center w-full h-screen justify-between p-7 gap-10 bg-gradient-to-tr from-black to-zinc-800 overflow-hidden">
+      <div className="flex flex-col gap-5 bg-gradient-to-tr items-center from-black to-zinc-800 w-full max-w-[1200px] min-w-[300px] max-h-[1080px]">
         <div className="flex w-full justify-start">
           <Navmenu />
         </div>
@@ -55,7 +55,7 @@ const App = ({ outerfile }) => {
           <Fileuploads setFile={setFile} />
 
           {results ? (
-            <h1 className="text-9xl text-white text-shadow-border font-bold">
+            <h1 className="text-7xl lg:text-9xl text-white text-shadow-border font-bold">
               {results.cgpa}
             </h1>
           ) : (
@@ -74,10 +74,10 @@ const App = ({ outerfile }) => {
         </div>
       </div>
 
-      <div className="flex flex-col item-center h-full w-full p-5">
+      <div className="flex flex-col item-center h-full w-full p-5 ">
         <div className="flex flex-col item-center justify-end pb-15 gap-5 h-full w-full">
           <Button
-            className={`${Loading ? "bg-gray-400 cursor-not-allowed" : ""}`}
+            className={`${Loading ? "bg-gray-400 cursor-not-allowed" : ""}` }
             onClick={uploadFile}
             disabled={Loading || !file}
           >
@@ -92,7 +92,7 @@ const App = ({ outerfile }) => {
           {results !=null ? <Drawers result={results}/> : "" }
         </div>
 
-        <footer className="text-xs text-center text-zinc-500">
+        <footer className="text-[10px] text-center text-zinc-500">
           <p>
             &copy; {new Date().getFullYear()} AI CGPA Calculator | GRTIET | SSS
           </p>
