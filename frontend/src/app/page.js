@@ -55,7 +55,7 @@ const App = ({ outerfile }) => {
           <Fileuploads setFile={setFile} />
 
           {results ? (
-            <h1 className="text-7xl lg:text-9xl text-white text-shadow-border font-bold">
+            <h1 className="text-8xl lg:text-9xl text-white text-shadow-border font-bold">
               {results.cgpa}
             </h1>
           ) : Loading ? (
