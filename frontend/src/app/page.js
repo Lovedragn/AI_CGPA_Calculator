@@ -4,6 +4,7 @@ import Navmenu from "../components/Base/navmenu";
 import Fileuploads from "@/components/Base/fileupload";
 import { Drawers } from "@/components/Base/drawer";
 import { Button } from "@/components/ui/button";
+import { Link } from "lucide-react";
 
 // Load the backend URL from the environment variable
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
@@ -45,8 +46,8 @@ const App = ({ outerfile }) => {
   };
 
   return (
-    <div className="flex flex-col items-center w-full h-screen p-7 gap-10 bg-gradient-to-b from-black to-zinc-950 overflow-hidden">
-      <div className="flex flex-col gap-5 bg-gradient-to-b items-center from-black to-zinc-950 w-full max-w-[1200px] min-w-[300px] h-screen max-h-[1080px]">
+    <div className="flex flex-col items-center w-full h-screen justify-between p-7 gap-10 bg-gradient-to-tr from-black to-zinc-900 overflow-hidden">
+      <div className="flex flex-col gap-5 bg-gradient-to-tr items-center from-black to-zinc-900 w-full max-w-[1200px] min-w-[300px] max-h-[1080px]">
         <div className="flex w-full justify-start">
           <Navmenu />
         </div>
@@ -58,24 +59,42 @@ const App = ({ outerfile }) => {
               {results.cgpa}
             </h1>
           ) : (
-            ""
+            <p className="relative z-20 font-thin text-zinc-400 text-sm mt-2 text-center">
+              <span className="font-bold text-gray-300">Accurate results</span> for
+              students who have passed all subjects.
+              <br /> For concerns, please contact{" "}
+              <a
+                href="https://mail.google.com/mail/u/0/#inbox?compose=new"
+                className="underline font-bold text-white"
+              >
+                sujith.sappani@gmail.com
+              </a>
+            </p>
           )}
-
-          <Button
-            className={`${Loading ? "bg-gray-400 cursor-not-allowed" : ""}`}
-            onClick={uploadFile}
-            disabled={Loading || !file}
-          >
-            Upload
-          </Button>
-          {error && (
-            <div className="mt-4 p-3 bg-red-600 text-white-700 font-bold rounded-full">
-              <p>{"Upload a Valid PDF !!"}</p>
-            </div>
-          )}
-
-          <Drawers result={results} />
         </div>
+      </div>
+
+      <div className="">
+        <Button
+          className={`${Loading ? "bg-gray-400 cursor-not-allowed" : ""}`}
+          onClick={uploadFile}
+          disabled={Loading || !file}
+        >
+          Upload
+        </Button>
+        {error && (
+          <div className="mt-4 p-3 bg-red-600 text-white-700 font-bold rounded-full">
+            <p>{"Upload a Valid PDF !!"}</p>
+          </div>
+        )}
+
+        <Drawers result={results} />
+
+        <footer className="text-xs text-center text-zinc-500">
+          <p>
+            &copy; {new Date().getFullYear()} AI CGPA Calculator | GRTIET | SSS
+          </p>
+        </footer>
       </div>
     </div>
   );
