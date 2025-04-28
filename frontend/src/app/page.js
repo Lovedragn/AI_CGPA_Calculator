@@ -55,13 +55,13 @@ const App = ({ outerfile }) => {
           <Fileuploads setFile={setFile} />
 
           {results ? (
-            <h1 className="text-9xl text-white text-shadow-border">
+            <h1 className="text-9xl text-white text-shadow-border font-bold">
               {results.cgpa}
             </h1>
           ) : (
             <p className="relative z-20 font-thin text-zinc-400 text-sm mt-2 text-center">
-              <span className="font-bold text-gray-300">Accurate results</span> for
-              students who have passed all subjects.
+              <span className="font-bold text-gray-300">Accurate results</span>{" "}
+              for students who have passed all subjects.
               <br /> For concerns, please contact{" "}
               <a
                 href="https://mail.google.com/mail/u/0/#inbox?compose=new"
@@ -74,21 +74,23 @@ const App = ({ outerfile }) => {
         </div>
       </div>
 
-      <div className="">
-        <Button
-          className={`${Loading ? "bg-gray-400 cursor-not-allowed" : ""}`}
-          onClick={uploadFile}
-          disabled={Loading || !file}
-        >
-          Upload
-        </Button>
-        {error && (
-          <div className="mt-4 p-3 bg-red-600 text-white-700 font-bold rounded-full">
-            <p>{"Upload a Valid PDF !!"}</p>
-          </div>
-        )}
+      <div className="flex flex-col item-center h-full w-full p-5">
+        <div className="flex flex-col item-center justify-end pb-15 gap-5 h-full w-full">
+          <Button
+            className={`${Loading ? "bg-gray-400 cursor-not-allowed" : ""}`}
+            onClick={uploadFile}
+            disabled={Loading || !file}
+          >
+            Upload
+          </Button>
+          {error && (
+            <div className="mt-4 p-3 bg-red-600 text-white-700 font-bold rounded-full">
+              <p>{"Upload a Valid PDF !!"}</p>
+            </div>
+          )}
 
-        <Drawers result={results} />
+          {results !=null ? <Drawers result={results}/> : "" }
+        </div>
 
         <footer className="text-xs text-center text-zinc-500">
           <p>
