@@ -4,7 +4,7 @@ import Navmenu from "../components/Base/navmenu";
 import Fileuploads from "@/components/Base/fileupload";
 import { Drawers } from "@/components/Base/drawer";
 import { Button } from "@/components/ui/button";
-import { Link } from "lucide-react";
+import { Skeleton } from "@/components/ui/skeleton";
 
 // Load the backend URL from the environment variable
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
@@ -46,9 +46,9 @@ const App = ({ outerfile }) => {
   };
 
   return (
-    <div className="flex flex-col items-center w-full h-screen justify-between p-7 gap-10 bg-gradient-to-tr from-black to-zinc-800 overflow-hidden">
+    <div className="flex flex-col items-center w-full h-screen justify-between p-3 gap-10 bg-gradient-to-tr from-black to-zinc-800 overflow-hidden">
       <div className="flex flex-col gap-5 bg-gradient-to-tr items-center from-black to-zinc-800 w-full max-w-[1200px] min-w-[300px] max-h-[1080px]">
-        <div className="flex w-full justify-start">
+        <div className="flex w-full justify-start ">
           <Navmenu />
         </div>
         <div className="flex flex-col items-center gap-5 w-full ">
@@ -58,7 +58,10 @@ const App = ({ outerfile }) => {
             <h1 className="text-7xl lg:text-9xl text-white text-shadow-border font-bold">
               {results.cgpa}
             </h1>
+          ) : Loading ? (
+            <Skeleton className="w-[9rem] h-[9rem] rounded-3xl" />
           ) : (
+           
             <p className="relative z-20 font-thin text-zinc-400 text-sm mt-2 text-center">
               <span className="font-bold text-gray-300">Accurate results</span>{" "}
               for students who have passed all subjects.
@@ -74,10 +77,10 @@ const App = ({ outerfile }) => {
         </div>
       </div>
 
-      <div className="flex flex-col item-center h-full w-full p-5 ">
-        <div className="flex flex-col item-center justify-end pb-15 gap-5 h-full w-full">
+      <div className="flex flex-col items-center h-full w-full ">
+        <div className="flex flex-col item-center justify-end  gap-5 h-full w-full max-w-[200px]">
           <Button
-            className={`${Loading ? "bg-gray-400 cursor-not-allowed" : ""}` }
+            className={`${Loading ? "bg-gray-400 cursor-not-allowed" : ""}`}
             onClick={uploadFile}
             disabled={Loading || !file}
           >
@@ -89,10 +92,10 @@ const App = ({ outerfile }) => {
             </div>
           )}
 
-          {results !=null ? <Drawers result={results}/> : "" }
+          {results != null ? <Drawers result={results} /> : ""}
         </div>
 
-        <footer className="text-[10px] text-center text-zinc-500">
+        <footer className="text-[10px] w-full text-center text-zinc-500 border-t border-zinc-500 pt-3 mt-8">
           <p>
             &copy; {new Date().getFullYear()} AI CGPA Calculator | GRTIET | SSS
           </p>
