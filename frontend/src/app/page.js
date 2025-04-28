@@ -6,7 +6,7 @@ import { Drawers } from "@/components/Base/drawer";
 import { Button } from "@/components/ui/button";
 
 // Load the backend URL from the environment variable
-const API_URL = process.env.NEXT_PUBLIC_API_URL;
+const API_URL = "https://ai-cgpa-calculator-backend.onrender.com/";
 
 const App = ({ outerfile }) => {
   const [results, setResults] = useState(null);

@@ -24,8 +24,7 @@ const components = [
   {
     title: "Hover Card",
     href: "/docs/primitives/hover-card",
-    description:
-      "For sighted users to preview content available behind a link.",
+    description: "For sighted users to preview content available behind a link.",
   },
   {
     title: "Progress",
@@ -61,19 +60,16 @@ export function Navmenu() {
           <NavigationMenuContent className="bg-gradient-to-tr from-black to-zinc-900">
             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
-                <NavigationMenuLink asChild>
-                  <Link
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-zinc-900 to-zinc-800 p-6 no-underline outline-none focus:shadow-md"
-                    href="/"
-                  >
-                    <div className="mb-2 mt-4 text-lg font-medium">
-                      Layout Design
-                    </div>
-                    <p className="text-sm leading-tight  text-muted-foreground">
-                      Beautifully designed user friendly UI for fast access.
-                    </p>
-                  </Link>
-                </NavigationMenuLink>
+                {/* Fix: Use only one `<a>` tag via `Link` */}
+                <Link
+                  className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-zinc-900 to-zinc-800 p-6 no-underline outline-none focus:shadow-md"
+                  href="/"
+                >
+                  <div className="mb-2 mt-4 text-lg font-medium">Layout Design</div>
+                  <p className="text-sm leading-tight text-muted-foreground">
+                    Beautifully designed user-friendly UI for fast access.
+                  </p>
+                </Link>
               </li>
               <ListItem href="/docs" title="Introduction">
                 Re-usable components built using Radix UI and Tailwind CSS.
@@ -82,14 +78,14 @@ export function Navmenu() {
                 How to install dependencies and structure your app.
               </ListItem>
               <ListItem href="/docs/primitives/typography" title="Typography">
-                Styles for headings, paragraphs, lists...etc
+                Styles for headings, paragraphs, lists...etc.
               </ListItem>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        <NavigationMenuItem >
+        <NavigationMenuItem>
           <NavigationMenuTrigger>Components</NavigationMenuTrigger>
-          <NavigationMenuContent className="bg-gradient-to-tr from-black to-zinc-900   ">
+          <NavigationMenuContent className="bg-gradient-to-tr from-black to-zinc-900">
             <ul className="grid gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
               {components.map((component) => (
                 <ListItem
@@ -104,9 +100,10 @@ export function Navmenu() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink className={navigationMenuTriggerStyle() }>
-            <Link href={"https://github.com/Lovedragn"}>
-            Visit
+          {/* Fix: Ensure no nested `<a>` tags */}
+          <NavigationMenuLink asChild>
+            <Link href="https://github.com/Lovedragn" className={navigationMenuTriggerStyle()}>
+              Visit
             </Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
@@ -116,26 +113,26 @@ export function Navmenu() {
 }
 
 const ListItem = React.forwardRef(function ListItem(
-  { className, title, children, ...props },
+  { className, title, children, href, ...props },
   ref
 ) {
   return (
     <li>
-      <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
-          )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
-        </a>
-      </NavigationMenuLink>
+      {/* Fix: Directly use `Link` for navigation */}
+      <Link
+        href={href}
+        className={cn(
+          "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+          className
+        )}
+        ref={ref}
+        {...props}
+      >
+        <div className="text-sm font-medium leading-none">{title}</div>
+        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+          {children}
+        </p>
+      </Link>
     </li>
   );
 });
