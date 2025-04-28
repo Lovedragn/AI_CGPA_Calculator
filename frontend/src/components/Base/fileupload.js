@@ -4,7 +4,7 @@ import { FileUpload } from "@/components/ui/file-upload";
 
 export function Fileuploads({ setFile }) {
   const handleFileUpload = (file) => {
-    setFile(file); // no need [0], file is already a single file
+    setFile(file);
   };
 
   return (
