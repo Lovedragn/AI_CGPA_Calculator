@@ -53,15 +53,17 @@ const App = ({ outerfile }) => {
         </div>
         <div className="flex flex-col items-center gap-5 w-full">
           <Fileuploads setFile={setFile} />
-        
+
           {results ? (
-            <h1 className="text-8xl lg:text-9xl text-white text-shadow-border font-bold">
-              {results.cgpa}
-            </h1>
+            <div className="">
+              <div className="flex flex-col w-full text-end font-thin ">{results.student_info.Student_Name}</div>
+              <h1 className="text-8xl lg:text-9xl text-white text-shadow-border font-bold">
+                {results.cgpa}
+              </h1>
+            </div>
           ) : Loading ? (
             <Skeleton className="w-[9rem] h-[9rem] rounded-3xl" />
           ) : (
-           
             <p className="relative z-20 font-thin text-zinc-400 text-sm mt-2 text-center">
               <span className="font-bold text-gray-300">Accurate results</span>{" "}
               for students who have passed all subjects.
@@ -73,11 +75,9 @@ const App = ({ outerfile }) => {
                 sujith.sappani@gmail.com
               </a>
             </p>
-          )}  
+          )}
         </div>
-      
       </div>
-      
 
       <div className="flex flex-col items-center h-full w-full ">
         <div className="flex flex-col item-center justify-end  gap-5 h-full w-full max-w-[200px]">
