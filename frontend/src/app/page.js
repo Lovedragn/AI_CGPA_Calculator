@@ -46,7 +46,7 @@ const App = ({ outerfile }) => {
   };
 
   return (
-    <div className="flex flex-col items-center w-full max-h-screen h-screen justify-between p-3 gap-10 bg-gradient-to-t from-80% from-black  to-neutral-700 overflow-hidden">
+    <div className="flex flex-col items-center w-full max-h-screen h-screen justify-between p-3 gap-10 bg-gradient-to-tr  from-black  to-zinc-800 overflow-hidden">
       <div className="flex flex-col gap-5 bg-gradient-to-tr items-cente w-full max-w-[1200px] min-w-[300px] max-h-[1080px] h-full">
         <div className="flex w-full justify-start ">
           <Navmenu />
@@ -65,14 +65,12 @@ const App = ({ outerfile }) => {
             <Skeleton className="w-[9rem] h-[9rem] rounded-3xl" />
           ) : (
             <p className="relative z-20 font-thin text-zinc-400 text-sm mt-2 text-center">
-              <span className="font-bold text-gray-300">Accurate results</span>{" "}
-              for students who have passed all subjects.
-              <br /> For concerns, please contact{" "}
+              For concerns, please contact_ 
               <a
                 href="https://mail.google.com/mail/u/0/#inbox?compose=new"
                 className="underline font-bold text-white"
               >
-                sujith.sappani@gmail.com
+                 sujith.sappani@gmail.com
               </a>
             </p>
           )}
