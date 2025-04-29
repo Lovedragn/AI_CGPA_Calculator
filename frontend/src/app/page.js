@@ -46,7 +46,7 @@ const App = ({ outerfile }) => {
   };
 
   return (
-    <div className="flex flex-col items-center w-full h-screen justify-between p-3 gap-10 bg-gradient-to-tr from-black to-zinc-800 overflow-hidden">
+    <div className="flex flex-col items-center w-full max-h-screen h-screen justify-between p-3 gap-10 bg-gradient-to-t from-80% from-black  to-neutral-700 overflow-hidden">
       <div className="flex flex-col gap-5 bg-gradient-to-tr items-cente w-full max-w-[1200px] min-w-[300px] max-h-[1080px] h-full">
         <div className="flex w-full justify-start ">
           <Navmenu />
@@ -97,7 +97,7 @@ const App = ({ outerfile }) => {
           {results != null ? <Drawers result={results} /> : ""}
         </div>
 
-        <footer className="text-[10px] w-full text-center text-zinc-500 border-t border-zinc-500 pt-3 mt-8">
+        <footer className="text-[10px] w-full text-center text-zinc-500 pt-3 mt-8">
           <p>
             &copy; {new Date().getFullYear()} AI CGPA Calculator | GRTIET | SSS
           </p>

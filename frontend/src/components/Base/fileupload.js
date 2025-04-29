@@ -8,7 +8,7 @@ export function Fileuploads({ setFile }) {
   };
 
   return (
-    <div className="w-full mx-auto border border-dashed bg-black rounded-xl pb-2">
+    <div className="w-full mx-auto border-1 border-zinc-600 border-dashed  bg-black rounded-xl pb-2">
       <FileUpload onChange={handleFileUpload} />
     </div>
   );
