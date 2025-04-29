@@ -47,13 +47,13 @@ const App = ({ outerfile }) => {
 
   return (
     <div className="flex flex-col items-center w-full h-screen justify-between p-3 gap-10 bg-gradient-to-tr from-black to-zinc-800 overflow-hidden">
-      <div className="flex flex-col gap-5 bg-gradient-to-tr items-center from-black to-zinc-800 w-full max-w-[1200px] min-w-[300px] max-h-[1080px]">
+      <div className="flex flex-col gap-5 bg-gradient-to-tr items-cente w-full max-w-[1200px] min-w-[300px] max-h-[1080px] h-full">
         <div className="flex w-full justify-start ">
           <Navmenu />
         </div>
-        <div className="flex flex-col items-center gap-5 w-full ">
+        <div className="flex flex-col items-center gap-5 w-full">
           <Fileuploads setFile={setFile} />
-
+        
           {results ? (
             <h1 className="text-8xl lg:text-9xl text-white text-shadow-border font-bold">
               {results.cgpa}
@@ -73,9 +73,11 @@ const App = ({ outerfile }) => {
                 sujith.sappani@gmail.com
               </a>
             </p>
-          )}
+          )}  
         </div>
+      
       </div>
+      
 
       <div className="flex flex-col items-center h-full w-full ">
         <div className="flex flex-col item-center justify-end  gap-5 h-full w-full max-w-[200px]">
