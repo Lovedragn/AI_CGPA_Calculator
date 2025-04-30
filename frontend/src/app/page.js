@@ -49,15 +49,14 @@ const App = ({ outerfile }) => {
 
   return (
     <div className="flex flex-col items-center w-full max-h-screen h-screen justify-between p-3 gap-10 bg-gradient-to-tr from-black to-zinc-800 overflow-hidden shadow-[0px_0px_50px_rgba(255,255,255,0.1)] ">
-      <FloatingObject />
-      <FloatingObject />
       <div className="flex flex-col gap-5 bg-gradient-to-tr items-cente w-full max-w-[1200px] min-w-[300px] max-h-[1080px] h-full">
         <div className="flex w-full justify-start ">
           <Navmenu />
         </div>
         <div className="flex flex-col items-center gap-5 w-full">
           <Fileuploads setFile={setFile} />
-
+             <FloatingObject />      <FloatingObject /> <FloatingObject />      <FloatingObject />
+     
           {results ? (
             <div className="">
               <div className="flex flex-col w-full text-end font-thin ">
