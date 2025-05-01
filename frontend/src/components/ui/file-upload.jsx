@@ -58,7 +58,7 @@ export const FileUpload = ({ onChange }) => {
           ref={fileInputRef}
           id="file-upload-handle"
           type="file"
-          accept=".pdf,.jpeg,.png,.PNG,.jpg,.JPG"
+          accept=".pdf,.png,.jpg,.jpeg"
           onChange={(e) => handleFileChange(Array.from(e.target.files || []))}
           className="hidden"
         />
@@ -130,7 +130,7 @@ export const FileUpload = ({ onChange }) => {
                   damping: 70,
                 }}
                 className={cn(
-                  "relative group-hover/file:shadow-2xl z-40 bg-zinc-800 flex items-center justify-center h-32 mt-4 w-full max-w-[8rem] mx-auto rounded-md",
+                  "relative group-hover/file:shadow-2xl z-40 bg-gradient-to-l from-zinc-900 via-zinc-800 to-zinc-900 flex items-center justify-center h-32 mt-4 w-full max-w-[8rem] mx-auto rounded-md",
                   "shadow-[0px_10px_50px_rgba(0,0,0,0.1)]"
                 )}
               >

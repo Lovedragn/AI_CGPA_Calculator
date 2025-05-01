@@ -26,8 +26,8 @@ const FloatingObject = () => {
         width: "10px",
         height: "10px",
         background: "rgba(255, 255, 255, 0.1)",
-        borderRadius: "50%",
-        transition: "top 3s ease-out, left 10s ease-in",
+        borderRadius: "30%",
+        transition: "top 5s ease-in-out, left 10s ease-in-out",
       }}
     ></div>
   );

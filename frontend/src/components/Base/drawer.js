@@ -18,9 +18,9 @@ import { Tableform } from "../Base/table";
 
 export function Drawers({result}) {
   return (
-    <Drawer>
+    <Drawer >
       <DrawerTrigger asChild>
-        <Button variant="outline">Scores</Button>
+        <Button variant="outline" >Scores</Button>
       </DrawerTrigger>
       <DrawerPortal>
         <DrawerOverlay />

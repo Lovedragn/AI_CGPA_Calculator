@@ -31,7 +31,7 @@ const App = ({ outerfile }) => {
         method: "POST",
         body: formData,
       });
-
+  
       if (!res.ok) {
         const errorData = await res.json();
         throw new Error(errorData.error || "Failed to process file");
@@ -48,18 +48,18 @@ const App = ({ outerfile }) => {
   };
 
   return (
-    <div className="flex flex-col items-center w-full max-h-screen h-screen justify-between p-3 gap-10 bg-gradient-to-tr from-black to-zinc-800 overflow-hidden shadow-[0px_0px_50px_rgba(255,255,255,0.1)] ">
-      <div className="flex flex-col gap-5 bg-gradient-to-tr items-cente w-full max-w-[1200px] min-w-[300px] max-h-[1080px] h-full">
+    <div className="flex flex-col items-center w-full max-h-screen h-[100dvh] justify-between p-3 gap-10 bg-gradient-to-tr from-black to-zinc-800 overflow-hidden shadow-[0px_0px_50px_rgba(255,255,255,0.1)] ">
+      <div className="flex flex-col gap-5 items-cente w-full max-w-[1200px] min-w-[300px] max-h-[1080px] h-full ">
         <div className="flex w-full justify-start ">
           <Navmenu />
         </div>
         <div className="flex flex-col items-center gap-5 w-full">
           <Fileuploads setFile={setFile} />
-             <FloatingObject />      <FloatingObject /> <FloatingObject />      <FloatingObject />
-     
+          <FloatingObject /> <FloatingObject /> <FloatingObject />{" "}
+          <FloatingObject />
           {results ? (
             <div className="">
-              <div className="flex flex-col w-full text-end font-thin ">
+              <div className="flex flex-col w-full text-end font-bold  ">
                 {results.student_info.Student_Name}
               </div>
               <h1 className="text-8xl lg:text-9xl text-white text-shadow-border font-bold">
@@ -83,7 +83,8 @@ const App = ({ outerfile }) => {
       </div>
 
       <div className="flex flex-col items-center h-full w-full ">
-        <div className="flex flex-col item-center justify-end  gap-5 h-full w-full max-w-[200px]">
+        <div className="flex flex-col item-center justify-end gap-5 h-full w-full max-w-[200px]">
+          {results != null ? <Drawers result={results} /> : ""}
           <Button
             className={`${Loading ? "bg-gray-400 cursor-not-allowed" : ""}`}
             onClick={uploadFile}
@@ -97,7 +98,6 @@ const App = ({ outerfile }) => {
             </div>
           )}
 
-          {results != null ? <Drawers result={results} /> : ""}
         </div>
 
         <footer className="text-[10px] w-full text-center text-zinc-500 pt-3 mt-8">
