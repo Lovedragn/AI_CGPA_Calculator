@@ -84,12 +84,13 @@ const App = ({ outerfile }) => {
         </div>
       </div>
 
-      <div className="flex flex-col items-center h-full w-full ">
-        <div className="flex flex-col item-center justify-end gap-5 h-full w-full max-w-[200px]">
+      <div className="flex flex-col items-center h-full w-full">
+        <div className="flex items-end justify-center gap-5 h-full w-full max-w-[400px]">
           {results != null ? <Drawers result={results} /> : ""}
           <Button
             className={`${Loading ? "bg-gray-400 cursor-not-allowed" : ""}`}
             onClick={uploadFile}
+            
             disabled={Loading || !file}
           >
             Upload
