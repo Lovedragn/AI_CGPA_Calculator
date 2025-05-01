@@ -8,8 +8,10 @@ import { Skeleton } from "@/components/ui/skeleton";
 import "./globals.css";
 import FloatingObject from "@/components/FloatingObject";
 
+
 // Load the backend URL from the environment variable
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
 
 const App = ({ outerfile }) => {
   const [results, setResults] = useState(null);
@@ -59,8 +61,8 @@ const App = ({ outerfile }) => {
           <FloatingObject />
           {results ? (
             <div className="">
-              <div className="flex flex-col w-full text-end font-bold  ">
-                {results.student_info.Student_Name}
+              <div className="flex flex-col w-full text-end font-thin text-zinc-500 ">
+                🎉Congrats {results.student_info.Student_Name}
               </div>
               <h1 className="text-8xl lg:text-9xl text-white text-shadow-border font-bold">
                 {results.cgpa}

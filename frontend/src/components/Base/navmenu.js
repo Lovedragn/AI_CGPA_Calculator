@@ -43,11 +43,10 @@ export function Navmenu() {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Resource</NavigationMenuTrigger>
           <NavigationMenuContent className="bg-gradient-to-tr from-black to-zinc-900">
             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
-                {/* Fix: Use only one `<a>` tag via `Link` */}
                 <Link
                   className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-zinc-900 to-zinc-800 p-6 no-underline outline-none focus:shadow-md"
                   href="/"
@@ -71,7 +70,7 @@ export function Navmenu() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Docs</NavigationMenuTrigger>
           <NavigationMenuContent className="bg-gradient-to-tr from-black to-zinc-900">
             <ul className="grid gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
               {components.map((component) => (
