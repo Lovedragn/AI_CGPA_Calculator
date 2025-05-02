@@ -48,7 +48,7 @@ const App = ({ outerfile }) => {
   };
 
   return (
-    <div className="flex flex-col items-center w-full max-h-screen  h-[100dvh] justify-between p-3 gap-10 bg-gradient-to-tr from-black to-zinc-800 overflow-hidden shadow-[0px_0px_50px_rgba(255,255,255,0.1)] ">
+    <div className="flex flex-col items-center w-full max-h-screen h-[100dvh] justify-between p-3 gap-10 bg-gradient-to-tr from-black to-zinc-800  overflow-hidden shadow-[0px_0px_50px_rgba(255,255,255,0.1)] ">
       <div className="flex flex-col gap-5 items-cente w-full max-w-[1200px] min-w-[300px] max-h-[1080px] h-full ">
         <div className="flex w-full justify-start ">
           <Navmenu />
@@ -60,7 +60,7 @@ const App = ({ outerfile }) => {
           {results ? (
             <div className="flex flex-col gap-5 items-center">
             
-              <h1 className="text-8xl lg:text-9xl  text-transparent bg-gradient-to-b from-white to-zinc-300 bg-clip-text text-shadow-border font-bold font-dm-sans ">
+              <h1 className="text-8xl lg:text-9xl text-transparent bg-gradient-to-b from-white to-zinc-300 bg-clip-text text-shadow-border font-bold font-dm-sans ">
                 {results.cgpa}
               </h1>
               <div className="flex flex-col w-full  text-center font-thin text-zinc-500 ">

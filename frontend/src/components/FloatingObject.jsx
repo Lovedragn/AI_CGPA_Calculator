@@ -29,6 +29,7 @@ const FloatingObject = () => {
         borderRadius: "30%",
         transition: "top 5s ease-in-out, left 10s ease-in-out",
       }}
+      className="animate-pulse"
     ></div>
   );
 };

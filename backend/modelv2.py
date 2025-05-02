@@ -30,6 +30,7 @@ def starter(file_path):
     # Load credits from credit.json
     with open("Credits.json", 'r') as f:
         credit_data = json.load(f)
+        print(credit_data)
     
     credit_dict = {entry["SUBJECT_CODE"]: entry["CREDITS"] for entry in credit_data}
     
