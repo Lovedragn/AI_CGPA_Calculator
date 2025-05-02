@@ -67,7 +67,7 @@ export const FileUpload = ({ onChange }) => {
         </div>
         <div className="flex flex-col items-center justify-center">
           <p className="relative z-20  font-normal text-neutral-400 text-base mt-2">
-            Upload your <span className="font-bold text-white ">PDF</span> here
+            Upload your's <span className="font-bold text-white ">Result</span>
           </p>
           <div className="relative w-full my-5 max-w-xl mx-auto">
             {files.length > 0 &&

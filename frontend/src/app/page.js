@@ -59,18 +59,20 @@ const App = ({ outerfile }) => {
           <FloatingObject />
           {results ? (
             <div className="flex flex-col gap-5 items-center">
-              <h1 className="text-8xl lg:text-9xl text-white text-shadow-border font-bold font-dm-sans ">
+            
+              <h1 className="text-8xl lg:text-9xl  text-transparent bg-gradient-to-b from-white to-zinc-300 bg-clip-text text-shadow-border font-bold font-dm-sans ">
                 {results.cgpa}
               </h1>
               <div className="flex flex-col w-full  text-center font-thin text-zinc-500 ">
-                🎉{results.student_info.Student_Name}
+                👏🏻{results.student_info.Student_Name}
               </div>
             </div>
           ) : Loading ? (
             <Skeleton className="w-[9rem] h-[9rem] rounded-3xl" />
           ) : (
             <p className="relative z-20 font-thin text-zinc-400 text-sm mt-2 text-center">
-              For concerns, please contact_
+              Upload only GRTIET PDF result <br/>
+              For concerns, Mail<br/>
               <a
                 href="https://mail.google.com/mail/u/0/#inbox?compose=new"
                 className="underline font-bold text-white"
@@ -101,7 +103,7 @@ const App = ({ outerfile }) => {
 
         <footer className="text-[10px] w-full text-center text-zinc-500 pt-3 mt-8">
           <p>
-            &copy; {new Date().getFullYear()} AI CGPA Calculator | GRTIET | SSS
+            &copy; {new Date().getFullYear()} AI CGPA Calculator | SSS
           </p>
         </footer>
       </div>
