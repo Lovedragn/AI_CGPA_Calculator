@@ -8,10 +8,8 @@ import { Skeleton } from "@/components/ui/skeleton";
 import "./globals.css";
 import FloatingObject from "@/components/FloatingObject";
 
-
 // Load the backend URL from the environment variable
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
-
 
 const App = ({ outerfile }) => {
   const [results, setResults] = useState(null);
@@ -33,7 +31,7 @@ const App = ({ outerfile }) => {
         method: "POST",
         body: formData,
       });
-  
+
       if (!res.ok) {
         const errorData = await res.json();
         throw new Error(errorData.error || "Failed to process file");
@@ -60,13 +58,13 @@ const App = ({ outerfile }) => {
           <FloatingObject /> <FloatingObject /> <FloatingObject />{" "}
           <FloatingObject />
           {results ? (
-            <div className="">
-              <div className="flex flex-col w-full text-end font-thin text-zinc-500 ">
-                🎉Congrats {results.student_info.Student_Name}
-              </div>
+            <div className="flex flex-col gap-5 items-center">
               <h1 className="text-8xl lg:text-9xl text-white text-shadow-border font-bold font-dm-sans ">
                 {results.cgpa}
               </h1>
+              <div className="flex flex-col w-full  text-center font-thin text-zinc-500 ">
+                🎉{results.student_info.Student_Name}
+              </div>
             </div>
           ) : Loading ? (
             <Skeleton className="w-[9rem] h-[9rem] rounded-3xl" />
@@ -90,7 +88,6 @@ const App = ({ outerfile }) => {
           <Button
             className={`${Loading ? "bg-gray-400 cursor-not-allowed" : ""}`}
             onClick={uploadFile}
-            
             disabled={Loading || !file}
           >
             Upload
@@ -100,7 +97,6 @@ const App = ({ outerfile }) => {
               <p>{"Upload a Valid PDF !!"}</p>
             </div>
           )}
-
         </div>
 
         <footer className="text-[10px] w-full text-center text-zinc-500 pt-3 mt-8">
