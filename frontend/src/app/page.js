@@ -60,7 +60,7 @@ const App = ({ outerfile }) => {
           {results ? (
             <div className="flex flex-col gap-5 items-center">
             
-              <h1 className="text-8xl lg:text-9xl text-transparent bg-gradient-to-b from-white to-zinc-300 bg-clip-text text-shadow-border font-bold font-dm-sans ">
+              <h1 className="text-8xl lg:text-9xl text-transparent bg-gradient-to-b from-white to-zinc-300 bg-clip-text text-shadow-border font-bold ">
                 {results.cgpa}
               </h1>
               <div className="flex flex-col w-full  text-center font-thin text-zinc-500 ">
