@@ -2825,7 +2825,7 @@
   },
   {
     "SUBJECT_CODE": "CS24403",
-    "CREDITS": 4
+    "CREDITS": 3
   },
   {
     "SUBJECT_CODE": "CS24602",
@@ -2837,6 +2837,10 @@
   },
   {
     "SUBJECT_CODE": "CS24801",
-    "CREDITS": 10
+    "CREDITS": 3
+  },
+  {
+    "SUBJECT_CODE": "CS3711",
+    "CREDITS": 2
   }
 ]

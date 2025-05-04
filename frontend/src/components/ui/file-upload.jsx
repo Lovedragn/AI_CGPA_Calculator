@@ -58,7 +58,7 @@ export const FileUpload = ({ onChange }) => {
           ref={fileInputRef}
           id="file-upload-handle"
           type="file"
-          accept=".pdf,.png,.jpg,.jpeg"
+          accept=".pdf,image/*"
           onChange={(e) => handleFileChange(Array.from(e.target.files || []))}
           className="hidden"
         />

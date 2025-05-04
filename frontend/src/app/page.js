@@ -1,5 +1,5 @@
 "use client";
-import { useState ,useEffect} from "react";
+import { useState, useEffect } from "react";
 import Navmenu from "../components/Base/navmenu";
 import Fileuploads from "@/components/Base/fileupload";
 import { Drawers } from "@/components/Base/drawer";
@@ -36,7 +36,6 @@ const App = ({ outerfile }) => {
         const errorData = await res.json();
         throw new Error(errorData.error || "Failed to process file");
       }
-
       const result = await res.json();
       setResults(result);
     } catch (error) {
@@ -46,15 +45,15 @@ const App = ({ outerfile }) => {
       setLoading(false);
     }
   };
-  useEffect(() => {
-    fetch(`${API_URL}`)
-      .then(res => console.log("Backend warmed up"))
-      .catch(err => console.error("Ping failed", err));
-  }, []);
-  
+  // useEffect(() => {
+  //   fetch(`${API_URL}`)
+  //     .then((res) => console.log("Backend warmed up"))
+  //     .catch((err) => console.error("Ping failed"));
+  // }, []);
+
   return (
     <div className="flex flex-col items-center w-full max-h-screen h-[100dvh] justify-between p-3 gap-10 bg-gradient-to-tr from-black to-zinc-800  overflow-hidden shadow-[0px_0px_50px_rgba(255,255,255,0.1)] ">
-      <div className="flex flex-col gap-5 items-cente w-full max-w-[1200px] min-w-[300px] max-h-[1080px] h-full ">
+      <div className="flex flex-col gap-5 items-center w-full max-w-[1200px] min-w-[300px] max-h-[1080px] h-full ">
         <div className="flex w-full justify-start ">
           <Navmenu />
         </div>
@@ -64,7 +63,6 @@ const App = ({ outerfile }) => {
           <FloatingObject />
           {results ? (
             <div className="flex flex-col gap-5 items-center">
-            
               <h1 className="text-8xl lg:text-9xl text-transparent bg-gradient-to-b from-white to-zinc-300 bg-clip-text text-shadow-border font-bold ">
                 {results.cgpa}
               </h1>
@@ -76,8 +74,9 @@ const App = ({ outerfile }) => {
             <Skeleton className="w-[9rem] h-[9rem] rounded-3xl" />
           ) : (
             <p className="relative z-20 font-thin text-zinc-400 text-sm mt-2 text-center">
-              Upload only GRTIET PDF result <br/>
-              For concerns, Mail<br/>
+              Upload only GRTIET PDF result <br />
+              For concerns, Mail
+              <br />
               <a
                 href="https://mail.google.com/mail/u/0/#inbox?compose=new"
                 className="underline font-bold text-white"
@@ -107,9 +106,7 @@ const App = ({ outerfile }) => {
         </div>
 
         <footer className="text-[10px] w-full text-center text-zinc-500 pt-3 mt-8">
-          <p>
-            &copy; {new Date().getFullYear()} AI CGPA Calculator | SSS
-          </p>
+          <p>&copy; {new Date().getFullYear()} AI CGPA Calculator | SSS</p>
         </footer>
       </div>
     </div>
