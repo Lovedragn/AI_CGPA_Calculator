@@ -23,9 +23,9 @@ const FloatingObject = () => {
         zIndex: 0,
         top: position.top,
         left: position.left,
-        width: "10px",
-        height: "10px",
-        background: "rgba(255, 255, 255, 0.1)",
+        width: "4px",
+        height: "4px",
+        background: "rgba(255, 255, 255, 0.2)",
         borderRadius: "30%",
         transition: "top 5s ease-in-out, left 10s ease-in-out",
       }}

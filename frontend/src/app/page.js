@@ -59,8 +59,10 @@ const App = ({ outerfile }) => {
         </div>
         <div className="flex flex-col items-center gap-5 w-full">
           <Fileuploads setFile={setFile} />
-          <FloatingObject /> <FloatingObject /> <FloatingObject />{" "}
-          <FloatingObject />
+          <FloatingObject /> <FloatingObject /> <FloatingObject />
+          <FloatingObject /> <FloatingObject />
+          <FloatingObject /> <FloatingObject />
+          <FloatingObject /> <FloatingObject />
           {results ? (
             <div className="flex flex-col gap-5 items-center">
               <h1 className="text-8xl lg:text-9xl text-transparent bg-gradient-to-b from-white to-zinc-300 bg-clip-text text-shadow-border font-bold ">
