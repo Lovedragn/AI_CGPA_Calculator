@@ -21,6 +21,7 @@ def starter(file_path):
         data = parse_anna_university_data(text)
         college = "anna_university"
     else:
+        data = parse_student_data(text)
         college = "grt_iet"
 
     with open("Credits.json", 'r') as f:
