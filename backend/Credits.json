@@ -4632,9 +4632,6 @@
     "CREDITS": 4
   },
   {
-    "CREDITS": 0
-  },
-  {
     "SUBJECT_CODE": "IT3511",
     "CREDITS": 2
   },
@@ -4656,7 +4653,7 @@
   },
   {
     "SUBJECT_CODE": "IT3811",
-    "CREDITS": 10
+    "CREDITS": 3
   },
   {
     "SUBJECT_CODE": "GE3751",
@@ -4681,38 +4678,6 @@
   {
     "SUBJECT_CODE": "GE3792",
     "CREDITS": 3
-  },
-  {
-    "SUBJECT_CODE": "MX3081",
-    "CREDITS": 0
-  },
-  {
-    "SUBJECT_CODE": "MX3082",
-    "CREDITS": 0
-  },
-  {
-    "SUBJECT_CODE": "MX3083",
-    "CREDITS": 0
-  },
-  {
-    "SUBJECT_CODE": "MX3085",
-    "CREDITS": 0
-  },
-  {
-    "SUBJECT_CODE": "MX3086",
-    "CREDITS": 0
-  },
-  {
-    "SUBJECT_CODE": "MX3087",
-    "CREDITS": 0
-  },
-  {
-    "SUBJECT_CODE": "MX3088",
-    "CREDITS": 0
-  },
-  {
-    "SUBJECT_CODE": "MX3089",
-    "CREDITS": 0
   },
   {
     "SUBJECT_CODE": "OEC352",

@@ -24,9 +24,9 @@ const FloatingObject = () => {
         zIndex: 0,
         top: position.top,
         left: position.left,
-        width: "7px",
-        height: "7px",
-        background: "rgba(255, 255, 255, 0.2)",
+        width: "4px",
+        height: "4px",
+        background: "rgba(255, 255, 255, 0.15)",
         transition: "top 5s ease-in-out, left 10s ease-in-out, border-radius 1s ease-in-out",
       }}
       className={`animate-pulse ${isCircle ? "rounded-full" : "rounded-none"}`}

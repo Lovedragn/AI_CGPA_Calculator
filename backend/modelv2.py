@@ -6,7 +6,7 @@ import cv2
 
 
 def starter(file_path):
- 
+    
     # Determine file type and extract text accordingly
     if file_path.lower().endswith('.pdf'):
         text = extract_pdf_text(file_path)
@@ -16,7 +16,6 @@ def starter(file_path):
       
     else:
         raise ValueError("Unsupported file format")
-
     if "coe.annauniv.edu" in text or "OFFICE OF THE CONTROLLER OF EXAMINATIONS" in text:
         data = parse_anna_university_data(text)
         college = "anna_university"
@@ -27,8 +26,9 @@ def starter(file_path):
     with open("Credits.json", 'r') as f:
         credit_data = json.load(f)
     
-    credit_dict = {entry["SUBJECT_CODE"]: entry["CREDITS"] for entry in credit_data}
-    
+    print("hello")
+    credit_dict = {entry["SUBJECT_CODE"]: float(entry["CREDITS"]) for entry in credit_data}
+    print("hell")   
     # ~ Add credits to each course only if subject code exists
     final_courses = []
     
@@ -50,7 +50,7 @@ def starter(file_path):
     
     # Calculate CGPA
     final_result = calculate_cgpa(final_data)
-    
+    print(final_result)
     # Return comprehensive result
     return {
         "cgpa": final_result,
