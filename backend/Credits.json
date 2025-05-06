@@ -696,10 +696,6 @@
     "CREDITS": 3
   },
   {
-    "SUBJECT_CODE": "MX3084",
-    "CREDITS": 3
-  },
-  {
     "SUBJECT_CODE": "MX3086",
     "CREDITS": 3
   },
@@ -2997,10 +2993,6 @@
     "CREDITS": 3
   },
   {
-    "SUBJECT_CODE": "EC3551",
-    "CREDITS": 3
-  },
-  {
     "SUBJECT_CODE": "EC3561",
     "CREDITS": 2
   },
@@ -3070,10 +3062,6 @@
   },
   {
     "SUBJECT_CODE": "CEC334",
-    "CREDITS": 3
-  },
-  {
-    "SUBJECT_CODE": "CEC332",
     "CREDITS": 3
   },
   {
@@ -3178,10 +3166,6 @@
   },
   {
     "SUBJECT_CODE": "CEC365",
-    "CREDITS": 3
-  },
-  {
-    "SUBJECT_CODE": "CEC367",
     "CREDITS": 3
   },
   {
@@ -3355,27 +3339,15 @@
   },
   {
     "SUBJECT_CODE": "EC3461",
-    "CREDITS": "1.5"
+    "CREDITS": 1.5
   },
   {
     "SUBJECT_CODE": "EC3462",
-    "CREDITS": "1.5"
-  },
-  {
-    "SUBJECT_CODE": "EC3501",
-    "CREDITS": 4
-  },
-  {
-    "SUBJECT_CODE": "EC3552",
-    "CREDITS": 3
+    "CREDITS": 1.5
   },
   {
     "SUBJECT_CODE": "EC3551",
     "CREDITS": 3
-  },
-  {
-    "SUBJECT_CODE": "EC3561",
-    "CREDITS": 2
   },
   {
     "SUBJECT_CODE": "ET3491",
@@ -4720,10 +4692,6 @@
   },
   {
     "SUBJECT_CODE": "MX3083",
-    "CREDITS": 0
-  },
-  {
-    "SUBJECT_CODE": "MX3084",
     "CREDITS": 0
   },
   {
