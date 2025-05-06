@@ -3,8 +3,6 @@ import re
 import json
 import os
 import cv2
-import easyocr
-import cv2
 
 
 def starter(file_path):
