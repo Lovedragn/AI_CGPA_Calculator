@@ -65,8 +65,7 @@ def extract_pdf_text(pdf_path):
     text = ""
     for page in doc:
         text += page.get_text()
-    with open("sample.txt", "w", encoding="utf-8") as f:
-            f.write(text.strip())
+   
     return text
 
 
@@ -90,8 +89,6 @@ def extract_image_text(image_path):
         results = reader.readtext(denoised)
         # Convert OCR results to a single string (similar to PDF text)
         extracted_text = "\n".join([res[1] for res in results])
-        with open("sample.txt", "w", encoding="utf-8") as f:
-            f.write(extracted_text.strip())
         
         return extracted_text
 
