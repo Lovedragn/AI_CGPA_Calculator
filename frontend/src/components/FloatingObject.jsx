@@ -7,13 +7,13 @@ const FloatingObject = () => {
   useEffect(() => {
     const moveObject = () => {
       setPosition({
-        top: `${Math.random() * 60}%`,
-        left: `${Math.random() * 80}%`,
+        top: `${Math.random() * 50}%`,
+        left: `${Math.random() * 90}%`,
       });
       setIsCircle((prev) => !prev); // Toggle between box and circle
     };
 
-    const interval = setInterval(moveObject, 5000);
+    const interval = setInterval(moveObject, 10000);
     return () => clearInterval(interval);
   }, []);
 
@@ -26,10 +26,10 @@ const FloatingObject = () => {
         left: position.left,
         width: "4px",
         height: "4px",
-        background: "rgba(255, 255, 255, 0.15)",
-        transition: "top 5s ease-in-out, left 10s ease-in-out, border-radius 1s ease-in-out",
+        background: "rgba(255, 255, 255, 0.3)",
+        transition: "top 5s ease-in-out, left 10s ease-in-out, border-radius 3s ease-in-out",
       }}
-      className={`animate-pulse ${isCircle ? "rounded-full" : "rounded-none"}`}
+      className={`shadow-lg shadow-blue-500 mix-blend-lighten  ${isCircle ? "rounded-full animate-pulse" : "rounded-[1px] animate-ping"}`}
     ></div>
   );
 };
