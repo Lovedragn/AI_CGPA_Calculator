@@ -24,12 +24,14 @@ const FloatingObject = () => {
         zIndex: 0,
         top: position.top,
         left: position.left,
-        width: "4px",
-        height: "4px",
-        background: "rgba(255, 255, 255, 0.3)",
-        transition: "top 5s ease-in-out, left 10s ease-in-out, border-radius 3s ease-in-out",
+        width: "3px",
+        height: "3px",
+        transition: "top 12s ease-out, left 12s ease-in-out, border-radius 5s ease-in-out",
       }}
-      className={`shadow-lg shadow-blue-500 mix-blend-lighten  ${isCircle ? "rounded-full animate-pulse" : "rounded-[1px] animate-ping"}`}
+      className={`bg-conic from-white to-transparent  transition-transform duration-1000 ${
+        isCircle ? "rounded-full animate-pulse" : "rounded-[1px] scale-150 opacity-40 animate-spin"
+      }`}
+      
     ></div>
   );
 };

@@ -91,7 +91,7 @@ const App = ({ outerfile }) => {
       </div>
 
       <div className="flex flex-col items-center h-full w-full">
-        <div className="flex items-end justify-center gap-5 h-full w-full max-w-[400px]">
+        <div className="flex items-center justify-end gap-5 h-full w-full max-w-full sm:max-w-[400px] flex-col sm:flex-row sm:justify-center sm:items-end">
           {results != null ? <Drawers result={results} /> : ""}
           <Button
             className={`${Loading ? "bg-gray-400 cursor-not-allowed" : ""}`}
