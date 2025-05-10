@@ -35,7 +35,7 @@ export function Drawers({result}) {
             </div>
             <DrawerFooter className="flex items-center w-ful">
               <DrawerClose asChild>
-                <Button variant="outline" size="lg">Close</Button>
+                <Button size="lg">Close</Button>
               </DrawerClose>
             </DrawerFooter>
           </div>
