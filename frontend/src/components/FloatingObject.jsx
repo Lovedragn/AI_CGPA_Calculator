@@ -29,7 +29,7 @@ const FloatingObject = () => {
         transition: "top 12s ease-out, left 12s ease-in-out, border-radius 5s ease-in-out",
       }}
       className={` from-transparent to-white  transition-transform duration-1000 ${
-        isCircle ? "bg-conic rounded-full animate-spin" : "bg-radial rounded-[1px] scale-150 opacity-40 animate-pulse"
+        isCircle ? "bg-conic rounded-full animate-spin" : "bg-radial rounded-[1px] scale-150 opacity-4"
       }`}
       
     ></div>
