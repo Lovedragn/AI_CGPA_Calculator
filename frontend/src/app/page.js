@@ -45,11 +45,11 @@ const App = ({ outerfile }) => {
       setLoading(false);
     }
   };
-  // useEffect(() => {
-  //   fetch(`${API_URL}`)
-  //     .then((res) => console.log("Backend warmed up"))
-  //     .catch((err) => console.error("Ping failed"));
-  // }, []);
+  useEffect(() => {
+    fetch(`${API_URL}`)
+      .then((res) => console.log("Backend warmed up"))
+      .catch((err) => console.error("Ping failed"));
+  }, []);
 
   return (
     <div className="flex flex-col items-center w-full max-h-screen h-[100dvh] justify-between p-3 gap-10 bg-gradient-to-tr from-black to-zinc-800  overflow-hidden shadow-[0px_0px_50px_rgba(255,255,255,0.1)] ">
