@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "AI CGPA Calculator",
+  title: "GPA Calculator",
   description: "AI based CGPA calculator for College Students ",
 };
 

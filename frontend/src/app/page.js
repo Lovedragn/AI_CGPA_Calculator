@@ -59,7 +59,7 @@ const App = ({ outerfile }) => {
         </div>
         <div className="flex flex-col items-center gap-5 w-full">
           <Fileuploads setFile={setFile} />
-          <FloatingObject /> <FloatingObject /> <FloatingObject />
+          <FloatingObject /> <FloatingObject />
           <FloatingObject /> <FloatingObject />
           <FloatingObject /> <FloatingObject />
           <FloatingObject /> <FloatingObject />

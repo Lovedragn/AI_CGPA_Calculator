@@ -69,22 +69,23 @@ export function Navmenu() {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>About</NavigationMenuTrigger>
-          <NavigationMenuContent className="bg-gradient-to-tr from-black to-zinc-900">
-            <ul className="grid gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-              {components.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                >
-                  {component.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
+      <NavigationMenuItem>
+  <NavigationMenuTrigger>About</NavigationMenuTrigger>
+  <NavigationMenuContent className="bg-gradient-to-tr from-black to-zinc-900">
+    <ul className="grid gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+      {components.map((component) => (
+        <li
+          key={component.title}
+          className="select-none space-y-1 rounded-md p-3 leading-none transition-colors text-white shadow hover:bg-zinc-800"
+        >
+          <div className="text-sm font-semibold leading-none">{component.title}</div>
+          <p className="text-sm text-muted-foreground">{component.description}</p>
+        </li>
+      ))}
+    </ul>
+  </NavigationMenuContent>
+</NavigationMenuItem>
+
         <NavigationMenuItem>
           {/* Fix: Ensure no nested `<a>` tags */}
           <NavigationMenuLink asChild>
