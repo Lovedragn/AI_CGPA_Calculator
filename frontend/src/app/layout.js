@@ -11,6 +11,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta name="google-site-verification" content={GOOGLE_VERIFY} />
+        <meta name="description" content="Free AI GPA calculator for students. Upload mark sheets and get instant CGPA results." />
+        <meta name="keywords" content="GPA Calculator, CGPA Tool, Student Calculator, Marksheet Analyzer, Grade Calculator" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="CGPA Calculator" />
+        <meta property="og:description" content="Calculate GPA automatically by uploading your mark sheet." />
+        <meta property="og:url" content="https://ai-cgpa-calculator.vercel.app/" />
+        <meta property="og:type" content="website" />
       </head>
       <body
         className={`antialiased`}
