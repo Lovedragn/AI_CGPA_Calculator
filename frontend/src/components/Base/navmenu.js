@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
+import {useState ,useEffect} from "react";
 import Link from "next/link";
-
 import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
@@ -14,31 +14,47 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
-const components =[
+const components = [
   {
-    "title": "CGPA Input Dialog",
-    "href": "http://ai-cgpa-calculator.vercel.app",
-    "description": "A modal dialog for students to input their CGPA details and receive calculated results."
+    title: "CGPA Input Dialog",
+    href: "http://ai-cgpa-calculator.vercel.app",
+    description:
+      "A modal dialog for students to input their CGPA details and receive calculated results.",
   },
   {
-    "title": "PDF Upload Section",
-    "href": "http://ai-cgpa-calculator.vercel.app",
-    "description": "Allows students to upload transcripts or mark sheets for automated CGPA extraction."
+    title: "PDF Upload Section",
+    href: "http://ai-cgpa-calculator.vercel.app",
+    description:
+      "Allows students to upload transcripts or mark sheets for automated CGPA extraction.",
   },
   {
-    "title": "Calculation Progress",
-    "href": "http://ai-cgpa-calculator.vercel.app",
-    "description": "Displays real-time CGPA calculation progress based on uploaded data."
+    title: "Calculation Progress",
+    href: "http://ai-cgpa-calculator.vercel.app",
+    description:
+      "Displays real-time CGPA calculation progress based on uploaded data.",
   },
   {
-    "title": "Result Scroll Area",
-    "href": "http://ai-cgpa-calculator.vercel.app",
-    "description": "Provides a structured display for CGPA results and detailed score breakdown."
-  }
-]
-
+    title: "Result Scroll Area",
+    href: "http://ai-cgpa-calculator.vercel.app",
+    description:
+      "Provides a structured display for CGPA results and detailed score breakdown.",
+  },
+];
 
 export function Navmenu() {
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup on unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   return (
     <NavigationMenu>
       <NavigationMenuList>
@@ -47,15 +63,19 @@ export function Navmenu() {
           <NavigationMenuContent className="bg-gradient-to-tr from-black to-zinc-900">
             <ul className="grid gap-3 p-4 w-[280px] md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
-                <Link
-                  className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-zinc-900 to-zinc-800 p-6 no-underline outline-none focus:shadow-md"
-                  href="/"
+                {windowWidth > 768 ? (<Link
+                  className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-zinc-900 to-zinc-800 p-6 no-underline outline-none focus:shadow-md bg-[url('/thumbnail1.png')] bg-cover bg-center"
+                  href="https://www.figma.com/design/GSsbx9vrR8F7rKfbFVx2lk/GPI-Calculator?m=auto&t=PJ9REQQ58XhKOk9s-1"
                 >
-                  <div className="mb-2 mt-4 text-lg font-medium">Layout Design</div>
-                  <p className="text-sm leading-tight text-muted-foreground">
-                    Beautifully designed user-friendly UI for fast access.
-                  </p>
-                </Link>
+            
+                </Link>) : (<Link
+                  className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-zinc-900 to-zinc-800 p-6 no-underline outline-none focus:shadow-md bg-[url('/thumbnail.png')] bg-cover bg-center aspect-[16/9]"
+                  href="https://www.figma.com/design/GSsbx9vrR8F7rKfbFVx2lk/GPI-Calculator?m=auto&t=PJ9REQQ58XhKOk9s-1"
+                >
+      
+              
+                </Link>)}
+                
               </li>
               <ListItem href="/docs" title="Introduction">
                 Re-usable components built using Radix UI and Tailwind CSS.
@@ -69,27 +89,34 @@ export function Navmenu() {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-      <NavigationMenuItem>
-  <NavigationMenuTrigger>About</NavigationMenuTrigger>
-  <NavigationMenuContent className="bg-gradient-to-tr from-black to-zinc-900">
-    <ul className="grid gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-      {components.map((component) => (
-        <li
-          key={component.title}
-          className="select-none space-y-1 rounded-md p-3 leading-none transition-colors text-white shadow hover:bg-zinc-800"
-        >
-          <div className="text-sm font-semibold leading-none">{component.title}</div>
-          <p className="text-sm text-muted-foreground">{component.description}</p>
-        </li>
-      ))}
-    </ul>
-  </NavigationMenuContent>
-</NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>About</NavigationMenuTrigger>
+          <NavigationMenuContent className="bg-gradient-to-tr from-black to-zinc-900">
+            <ul className="grid gap-3 p-4 md:w-full  md:grid-cols-2 lg:w-[600px]">
+              {components.map((component) => (
+                <li
+                  key={component.title}
+                  className="select-none space-y-1 rounded-md p-3 leading-none transition-colors text-white shadow hover:bg-zinc-800"
+                >
+                  <div className="text-sm font-semibold leading-none">
+                    {component.title}
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    {component.description}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
 
         <NavigationMenuItem>
-          {/* Fix: Ensure no nested `<a>` tags */}
+          {/* Fix: Ensure no nested <a> tags */}
           <NavigationMenuLink asChild>
-            <Link href="https://github.com/Lovedragn" className={navigationMenuTriggerStyle()}>
+            <Link
+              href="https://github.com/Lovedragn"
+              className={navigationMenuTriggerStyle()}
+            >
               Visit
             </Link>
           </NavigationMenuLink>
@@ -105,7 +132,7 @@ const ListItem = React.forwardRef(function ListItem(
 ) {
   return (
     <li>
-      {/* Fix: Directly use `Link` for navigation */}
+      {/* Fix: Directly use Link for navigation */}
       <Link
         href={href}
         className={cn(
