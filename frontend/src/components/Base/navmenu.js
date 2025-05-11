@@ -1,7 +1,6 @@
 "use client";
 
-import React from "react";
-import {useState ,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import {
@@ -42,19 +41,20 @@ const components = [
 ];
 
 export function Navmenu() {
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-    useEffect(() => {
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    // Set initial width on client only
+    setWindowWidth(window.innerWidth);
+
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
 
-    window.addEventListener('resize', handleResize);
-
-    // Cleanup on unmount
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
+
   return (
     <NavigationMenu>
       <NavigationMenuList>
@@ -63,19 +63,17 @@ export function Navmenu() {
           <NavigationMenuContent className="bg-gradient-to-tr from-black to-zinc-900">
             <ul className="grid gap-3 p-4 w-[280px] md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
-                {windowWidth > 768 ? (<Link
-                  className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-zinc-900 to-zinc-800 p-6 no-underline outline-none focus:shadow-md bg-[url('/thumbnail1.png')] bg-cover bg-center"
-                  href="https://www.figma.com/design/GSsbx9vrR8F7rKfbFVx2lk/GPI-Calculator?m=auto&t=PJ9REQQ58XhKOk9s-1"
-                >
-            
-                </Link>) : (<Link
-                  className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-zinc-900 to-zinc-800 p-6 no-underline outline-none focus:shadow-md bg-[url('/thumbnail.png')] bg-cover bg-center aspect-[16/9]"
-                  href="https://www.figma.com/design/GSsbx9vrR8F7rKfbFVx2lk/GPI-Calculator?m=auto&t=PJ9REQQ58XhKOk9s-1"
-                >
-      
-              
-                </Link>)}
-                
+                {windowWidth > 768 ? (
+                  <Link
+                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-zinc-900 to-zinc-800 p-6 no-underline outline-none focus:shadow-md bg-[url('/thumbnail1.png')] bg-cover bg-center"
+                    href="https://www.figma.com/design/GSsbx9vrR8F7rKfbFVx2lk/GPI-Calculator?m=auto&t=PJ9REQQ58XhKOk9s-1"
+                  />
+                ) : (
+                  <Link
+                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-zinc-900 to-zinc-800 p-6 no-underline outline-none focus:shadow-md bg-[url('/thumbnail.png')] bg-cover bg-center aspect-[16/9]"
+                    href="https://www.figma.com/design/GSsbx9vrR8F7rKfbFVx2lk/GPI-Calculator?m=auto&t=PJ9REQQ58XhKOk9s-1"
+                  />
+                )}
               </li>
               <ListItem href="/docs" title="Introduction">
                 Re-usable components built using Radix UI and Tailwind CSS.
@@ -89,10 +87,11 @@ export function Navmenu() {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
+
         <NavigationMenuItem>
           <NavigationMenuTrigger>About</NavigationMenuTrigger>
           <NavigationMenuContent className="bg-gradient-to-tr from-black to-zinc-900">
-            <ul className="grid gap-3 p-4 md:w-full  md:grid-cols-2 lg:w-[600px]">
+            <ul className="grid gap-3 p-4 md:w-full md:grid-cols-2 lg:w-[600px]">
               {components.map((component) => (
                 <li
                   key={component.title}
@@ -111,7 +110,6 @@ export function Navmenu() {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          {/* Fix: Ensure no nested <a> tags */}
           <NavigationMenuLink asChild>
             <Link
               href="https://github.com/Lovedragn"
@@ -132,7 +130,6 @@ const ListItem = React.forwardRef(function ListItem(
 ) {
   return (
     <li>
-      {/* Fix: Directly use Link for navigation */}
       <Link
         href={href}
         className={cn(
