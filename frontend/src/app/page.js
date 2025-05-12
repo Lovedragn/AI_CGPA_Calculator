@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import "./globals.css";
 import FloatingObject from "@/components/FloatingObject";
+import Image from 'next/image';
+
 
 // Load the backend URL from the environment variable
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
@@ -54,8 +56,10 @@ const App = ({ outerfile }) => {
   return (
     <div className="flex flex-col items-center w-full max-h-screen h-[100dvh] justify-between p-3 gap-10 bg-gradient-to-tr from-black to-zinc-800  overflow-hidden shadow-[0px_0px_50px_rgba(255,255,255,0.1)] ">
       <div className="flex flex-col gap-5 items-center w-full max-w-[1200px] min-w-[300px] max-h-[1080px] h-full ">
-        <div className="flex w-full justify-start ">
+        <div className="flex w-full justify-between ">
           <Navmenu />
+            <Image src={"/logo.svg"} width={10} height={10} alt="Logo" className="w-7 md:w-10" onClick={()=>location.reload()}></Image>
+
         </div>
         <div className="flex flex-col items-center gap-5 w-full">
           <Fileuploads setFile={setFile} />
