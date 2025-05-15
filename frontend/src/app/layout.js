@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
         <meta property="og:type" content="website" />
       </head>
       <body
-        className={`antialiased`}
+        className={`bg-black antialiased`}
       >
         {children}
       </body>
