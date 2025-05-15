@@ -3,7 +3,7 @@
   "short_name": "AI GPA",
   "icons": [
     {
-      "src": "/apple-touch-icon.png",
+      "src": "/chrome-512px.png",
       "sizes": "192x192",
       "type": "image/png"
     },
