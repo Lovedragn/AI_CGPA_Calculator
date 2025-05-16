@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
         <meta name="description" content="Free AI GPA calculator for students. Upload mark sheets and get instant CGPA results." />
         <meta name="keywords" content="GPA Calculator, CGPA Tool, Student Calculator, Marksheet Analyzer, Grade Calculator,GPA,GPA Calcy , CGPA , CGPA calcy , cgpa , gpa calculator , cgpa calculator,anna university calculator,grtiet calculator" />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="GPA Calculator" />
+        <meta property="og:title" content="AI GPA Calcy" />
         <meta property="og:description" content="Calculate GPA automatically by uploading your mark sheet." />
         <meta property="og:url" content="https://ai-cgpa-calculator.vercel.app/" />
         <meta property="og:type" content="website" />
