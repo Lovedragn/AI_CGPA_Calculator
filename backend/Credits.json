@@ -527,7 +527,7 @@
     "SUBJECT_CODE": "GE3151",
     "CREDITS": 3
   },
- 
+
   {
     "SUBJECT_CODE": "GE3252",
     "CREDITS": 1
@@ -4924,19 +4924,24 @@
   {
     "SUBJECT_CODE": "CRA332",
     "CREDITS": 3
-  },{
+  },
+  {
     "SUBJECT_CODE": "CS3301",
     "CREDITS": 3
-  },{
+  },
+  {
     "SUBJECT_CODE": "CS3311",
     "CREDITS": 1.5
-  },{
+  },
+  {
     "SUBJECT_CODE": "CS3351",
     "CREDITS": 4
-  },{
+  },
+  {
     "SUBJECT_CODE": "CS3352",
     "CREDITS": 3
-  },{
+  },
+  {
     "SUBJECT_CODE": "CS3301",
     "CREDITS": 3
   }

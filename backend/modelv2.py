@@ -26,9 +26,9 @@ def starter(file_path):
     with open("Credits.json", 'r') as f:
         credit_data = json.load(f)
     
-    print("hello")
+  
     credit_dict = {entry["SUBJECT_CODE"]: float(entry["CREDITS"]) for entry in credit_data}
-    print("hell")   
+   
     # ~ Add credits to each course only if subject code exists
     final_courses = []
     
@@ -141,8 +141,9 @@ def structure_text(text, source="default"):
             if match:
                 student_info['D.O.B'] = match.group(1)
         # Check for new semester header
-        if re.match(r'^\d+\s*SEM', line):
+        if re.match(r'^\d+\s*SEM', line) and current_sem is "":
             current_sem = line.strip()
+
         # Try to match a course entry
         if current_sem and i + 2 < len(lines):
             course_code = lines[i].strip()
