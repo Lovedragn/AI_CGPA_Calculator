@@ -1,6 +1,8 @@
 {
   "name": "GPA Calculator",
   "short_name": "AI GPA",
+  "description": "AI-powered CGPA calculator for precise grade evaluation | Quickly compute semester-wise and cumulative GPAs accuracy"
+,
   "icons": [
     {
       "src": "/chrome-512px.png",
