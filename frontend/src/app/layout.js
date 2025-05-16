@@ -2,7 +2,7 @@ import "./globals.css";
 const GOOGLE_VERIFY = process.env.GOOGLE_VERIFY_ID;
 
 export const metadata = {
-  title: "AI GPA Calcy",
+  title: "AI GPA calculator",
   description: "AI-powered CGPA calculator for precise grade evaluation | Quickly compute semester-wise and cumulative GPAs accuracy"
 };
 
