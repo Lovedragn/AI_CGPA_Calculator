@@ -129,5 +129,5 @@
 }
 
 .slow-spin {
-  animation: slowSpin 10s linear infinite;
+  animation: slowSpin 15s linear infinite, pulse 3s ease-out infinite;
 }
