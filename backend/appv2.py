@@ -13,7 +13,7 @@ CORS(app)
 UPLOAD_FOLDER = os.getenv('UPLOAD_FOLDER')
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-ALLOWED_EXTENSIONS = {'pdf', 'png', 'jpg', 'jpeg'}
+ALLOWED_EXTENSIONS = {'pdf'} # 'png', 'jpg', 'jpeg'
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
@@ -35,7 +35,6 @@ def calculate_cgpa():
         try:
             result = starter(file_path)
             print(result)
-
             return jsonify(result)
         except Exception as e:
             return jsonify({"error": str(e)}), 500

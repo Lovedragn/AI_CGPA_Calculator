@@ -10,13 +10,15 @@ def starter(file_path):
     # Determine file type and extract text accordingly
     if file_path.lower().endswith('.pdf'):
         text = extract_pdf_text(file_path)
+    
     elif file_path.lower().endswith(('.png', '.jpg', '.jpeg')):
         text = extract_image_text(file_path)
         data = structure_text(text, "image")
-      
+        
     else:
         raise ValueError("Unsupported file format")
-    if "coe.annauniv.edu" in text or "OFFICE OF THE CONTROLLER OF EXAMINATIONS" in text:
+    if "An Autonomous Institution" in text:
+
         data = parse_anna_university_data(text)
         college = "anna_university"
     else:
@@ -41,17 +43,12 @@ def starter(file_path):
                 "Course Name": course.get("Course Name", ""),
                 "Course Code": code
             })
-    
     final_data = {
         "Courses": final_courses,
         "Student Info": data["Student Info"]
     }
-
     
-    # Calculate CGPA
     final_result = calculate_cgpa(final_data)
-    print(final_result)
-    # Return comprehensive result
     return {
         "cgpa": final_result,
         "student_info": data["Student Info"],
@@ -107,8 +104,7 @@ def structure_text(text, source="default"):
         "D.O.B": "Unknown"
     }
     courses = []
-    current_sem = ""
-
+    current_sem = None
   # Default case (including when source is "image")
     for i, line in enumerate(lines):
         line = line.strip()
@@ -141,7 +137,7 @@ def structure_text(text, source="default"):
             if match:
                 student_info['D.O.B'] = match.group(1)
         # Check for new semester header
-        if re.match(r'^\d+\s*SEM', line) and current_sem is "":
+        if re.match(r'^\d+\s*SEM', line) and current_sem is None:
             current_sem = line.strip()
 
         # Try to match a course entry
@@ -164,8 +160,8 @@ def structure_text(text, source="default"):
     }
 
 def parse_student_data(text):
-    lines = text.split('\n')
 
+    lines = text.split('\n')
     student_info = {
         "Student_Name": "Unknown",
         "Register_Number": "Unknown",
@@ -173,11 +169,11 @@ def parse_student_data(text):
         "D.O.B": "Unknown"
     }
     courses = []
-    current_sem = ""
+    current_sem = None
     
     for i, line in enumerate(lines):
         line = line.strip()
-
+    
         # Extract Student Info
         if "Student Name" in line and i + 1 < len(lines):
             student_info['Student_Name'] = lines[i + 1].lstrip(':').strip()
@@ -191,24 +187,36 @@ def parse_student_data(text):
             match = re.search(r'D\.O\.B\s*[:\-]?\s*(\d{2}-\d{2}-\d{4})', line)
             if match:
                 student_info['D.O.B'] = match.group(1)
-
+                
+                
+        sem_match = re.match(r'^\d+\s*SEM', line)
+                    
         # Check for new semester header
-        if re.match(r'^\d+\s*SEM', line):
+        if sem_match and current_sem is None:
             current_sem = line.strip()
+   
+        if(sem_match):
+            matched_string = sem_match.group(0) 
+
 
         # Try to match a course entry
-        if current_sem and i + 2 < len(lines):
-            course_code = lines[i].strip()
-            course_name = lines[i + 1].strip()
-            grade = lines[i + 2].strip()
-
-            if re.match(r'^[A-Z]{2,4}\d{1,6}$', course_code) and grade in ['O', 'A+', 'A', 'B+', 'B','C','C+', 'RA']:
-                courses.append({
-                    "Semester": current_sem,
-                    "Course Code": course_code,
-                    "Course Name": course_name,
-                    "Grade": grade
-                })
+            if(current_sem == matched_string):
+            
+                if current_sem and i + 2 < len(lines):
+                    course_code = lines[i+1].strip()
+                    course_name = lines[i + 2].strip()
+                    print(course_code)
+                    grade = lines[i + 3].strip()
+                    if re.match(r'^[A-Z]{2,4}\d{1,6}$', course_code) and grade in ['O', 'A+', 'A', 'B+', 'B','C','C+', 'RA']:
+                        courses.append({
+                            "Semester": current_sem,
+                            "Course Code": course_code,
+                            "Course Name": course_name,
+                            "Grade": grade
+                        })
+                        print("Successful 👏🏻")
+                
+        
 
     return {
         "Student Info": student_info,
