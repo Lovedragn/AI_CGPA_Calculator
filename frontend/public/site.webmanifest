@@ -4,7 +4,7 @@
   "description": "AI-powered CGPA calculator for precise grade evaluation | Quickly compute semester-wise and cumulative GPAs accuracy"
 ,"icons": [
   {
-    "src": "/icons/logo.svg",
+    "src": "/logo.svg",
     "sizes": "any",
     "type": "image/svg+xml"
   },
