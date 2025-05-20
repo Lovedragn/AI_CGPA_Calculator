@@ -2,12 +2,7 @@
   "name": "GPA Calcy",
   "short_name": "AI GPA",
   "description": "AI-powered CGPA calculator for precise grade evaluation | Quickly compute semester-wise and cumulative GPAs accuracy"
-,"icons": [
-  {
-    "src": "/chrome-512px.png",
-    "sizes": "any",
-    "type": "image/png"
-  },
+  ,"icons": [
   {
     "src": "/chrome-512px.png",
     "sizes": "192x192",
@@ -17,6 +12,12 @@
     "src": "/chrome-512px.png",
     "sizes": "256x256",
     "type": "image/png"
+  },
+  {
+    "src": "/logo.svg",
+    "sizes": "any",
+    "type": "image/svg+xml",
+    "platform": "windows"
   }
 ],
   "start_url": "/",
