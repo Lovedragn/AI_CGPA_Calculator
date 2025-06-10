@@ -56,7 +56,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/logo.svg" />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="canonical" href="https://ai-cgpa-calculator.vercel.app/" />
         {GOOGLE_VERIFY && (
