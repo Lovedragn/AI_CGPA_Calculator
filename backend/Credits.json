@@ -2729,11 +2729,11 @@
   },
   {
     "SUBJECT_CODE": "EC3361",
-    "CREDITS": "1.5"
+    "CREDITS": 1.5
   },
   {
     "SUBJECT_CODE": "CS3362",
-    "CREDITS": "1.5"
+    "CREDITS": 1.5
   },
   {
     "SUBJECT_CODE": "GE3361",
@@ -2785,7 +2785,7 @@
   },
   {
     "SUBJECT_CODE": "EC3811",
-    "CREDITS": "10"
+    "CREDITS": 10
   },
   {
     "SUBJECT_CODE": "CEC363",
@@ -3001,11 +3001,21 @@
   },
   {
     "SUBJECT_CODE": "AD3381",
-    "CREDITS": "1.5"
+    "CREDITS": 1.5
+  },
+  {
+    "SUBJECT_CODE": "CME380",
+    "CREDITS": 3
+  },{
+    "SUBJECT_CODE": "CME387",
+    "CREDITS": 3
+  },{
+    "SUBJECT_CODE": "CME396",
+    "CREDITS": 3
   },
   {
     "SUBJECT_CODE": "AD3311",
-    "CREDITS": "1.5"
+    "CREDITS": 1.5
   },
   {
     "SUBJECT_CODE": "MA3391",
@@ -3057,7 +3067,7 @@
   },
   {
     "SUBJECT_CODE": "AD3811",
-    "CREDITS": "10"
+    "CREDITS": 10
   },
   {
     "SUBJECT_CODE": "CCS350",
@@ -3369,7 +3379,7 @@
   },
   {
     "SUBJECT_CODE": "ME3811",
-    "CREDITS": "10"
+    "CREDITS": 10
   },
   {
     "SUBJECT_CODE": "CME331",
