@@ -1,9 +1,7 @@
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
-  TableFooter,
   TableHead,
   TableHeader,
   TableRow,
@@ -19,7 +17,7 @@ export function Tableform({ result }) {
           <TableHead className="pr-5 w-30 text-right">Credits</TableHead>
         </TableRow>
       </TableHeader>
-      <TableBody className=" text-zinc-600 text-center">
+      <TableBody className=" text-zinc-400 text-center">
         {result?.courses.map((course, index) => (
           <TableRow key={index}>
             <TableCell className="font-medium text-left pl-5">
