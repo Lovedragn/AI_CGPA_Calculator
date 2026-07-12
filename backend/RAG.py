@@ -1,6 +1,7 @@
 import os
 import json
 from config import GOOGLE_API_KEY
+from pdf_model import calculate_cgpa
 from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_core.prompts import (
@@ -145,50 +146,6 @@ extract_chain = (
     | JsonOutputParser()
 )
 
-# Second AI Call: Compute CGPA and format final result using retrieved credits
-cgpa_prompt = ChatPromptTemplate.from_messages(
-    [
-        HumanMessagePromptTemplate.from_template(
-            """You are an expert CGPA calculator.
-
-Given the student's extracted courses (with credit values) and their student information, you must calculate their final CGPA.
-
-Grade to Point Mapping:
-- O: 10
-- A+: 9
-- A: 8
-- B+: 7
-- B: 6
-- C+: 5
-- C: 4
-- RA: 0
-
-Instructions:
-1. For each course, convert the letter Grade to a grade point using the mapping above.
-2. Multiply the grade point by the course's Credits to get the weighted points.
-3. Calculate the sum of the weighted points across all courses.
-4. Calculate the sum of all course Credits to get the total_credits.
-5. Compute the final CGPA = (sum of weighted points) / (total_credits). Format the CGPA as a string with 2 decimal places (e.g. "8.54"). If total_credits is 0, set CGPA to "NA".
-6. Return a valid JSON object matching the exact structure below. Do not include any explanations or markdown.
-
-JSON Format:
-{{
-    "cgpa": "CGPA_STRING",
-    "student_info": {student_info},
-    "courses": {courses_json},
-    "total_credits": {total_credits},
-    "college": "{college}"
-}}"""
-        )
-    ]
-)
-
-cgpa_chain = (
-    cgpa_prompt
-    | llm_model
-    | JsonOutputParser()
-)
-
 # ==========================
 # Pipeline
 # ==========================
@@ -209,7 +166,6 @@ def run_pipeline(user_input: str):
     
     # 2. Retrieve credits (direct exact lookup, fallback to retriever)
     final_courses = []
-    total_credits = 0.0
     
     for subject in raw_subjects:
         code = subject.get("SUBJECT_CODE")
@@ -229,23 +185,22 @@ def run_pipeline(user_input: str):
                 credit = float(docs[0].metadata.get("credits", 0.0))
                 code = docs[0].metadata.get("subject_code", code)
         
-        total_credits += credit
         final_courses.append({
             "Credits": credit,
             "Grade": normalized_grade,
             "Course Name": "",  
             "Course Code": code
         })
+    print(final_courses)
 
-    # 3. Second AI call: Compute CGPA and construct final response
-    courses_json_str = json.dumps(final_courses)
-    student_info_json_str = json.dumps(student_info)
-    
-    result = cgpa_chain.invoke({
-        "student_info": student_info_json_str,
-        "courses_json": courses_json_str,
+    # 3. Calculate CGPA using math in Python
+    cgpa = calculate_cgpa({"Courses": final_courses})
+    total_credits = sum(course["Credits"] for course in final_courses)
+        
+    return {
+        "cgpa": cgpa,
+        "student_info": student_info,
+        "courses": final_courses,
         "total_credits": int(total_credits),
         "college": college
-    })
-    
-    return result
+    }
