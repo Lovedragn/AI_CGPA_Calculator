@@ -3,16 +3,12 @@ from image_model import image_starter
 
 import os
 from flask_cors import CORS
-from dotenv import load_dotenv
 from flask import Flask, request, jsonify
-
-# Load environment variables from .env file
-load_dotenv()
+from config import UPLOAD_FOLDER, FLASK_PORT
 
 app = Flask(__name__)
 CORS(app)
 
-UPLOAD_FOLDER = os.getenv('UPLOAD_FOLDER')
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 ALLOWED_EXTENSIONS = {'pdf','png','jpg','jpeg'} 
@@ -55,5 +51,5 @@ def health_check():
     return jsonify({"status": "healthy"}), 200
 
 if __name__ == '__main__':
-    port = int(os.getenv('FLASK_PORT', 5000))
+    port = int(FLASK_PORT or 4000)
     app.run(port=port)

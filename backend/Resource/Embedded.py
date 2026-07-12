@@ -1,22 +1,21 @@
 import os
 import json
 import time
-from dotenv import load_dotenv
 
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_core.documents import Document
 
-# ==========================
-# Load Environment
-# ==========================
-load_dotenv()
+import sys
+backend_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if backend_dir not in sys.path:
+    sys.path.append(backend_dir)
+from config import GOOGLE_API_KEY
 
-api_key = os.getenv("GOOGLE_API_KEY")
+api_key = GOOGLE_API_KEY
 if not api_key:
     raise ValueError(
-        "GOOGLE_API_KEY environment variable is not set. "
-        "Please add GOOGLE_API_KEY=your_api_key to your .env file."
+        "GOOGLE_API_KEY environment variable is not set in config."
     )
 
 # ==========================

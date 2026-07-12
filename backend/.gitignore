@@ -1,0 +1,11 @@
+.agents
+.ruff_cache
+.venv
+__pycache__/
+*.pyc
+uploads/
+faiss_index/
+sample.txt
+.env
+.dev.env
+.prod.env

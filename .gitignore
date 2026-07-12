@@ -21,8 +21,6 @@ backend/.env
 backend/uploads/*
 !backend/uploads/.gitkeep
 uploads/
-backend/faiss_index/
-backend/sample.txt
 
 # Node / Frontend Build and Dependencies
 node_modules/

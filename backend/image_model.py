@@ -3,13 +3,11 @@ import base64
 import requests
 
 from RAG import run_pipeline
-from dotenv import load_dotenv
-
-load_dotenv()
+from config import MISTRAL_API_KEY
 
 def extract_text_from_image_mistral_api(image_bytes: bytes) -> str:
     
-    api_key = os.getenv("MISTRAL_API_KEY")
+    api_key = MISTRAL_API_KEY
             
     url = "https://api.mistral.ai/v1/ocr"
     

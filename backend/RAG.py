@@ -1,7 +1,6 @@
 import os
 import json
-from dotenv import load_dotenv
-
+from config import GOOGLE_API_KEY
 from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_core.prompts import (
@@ -10,18 +9,10 @@ from langchain_core.prompts import (
 )
 from langchain_core.output_parsers import JsonOutputParser
 
-
-# ==========================
-# Load Environment
-# ==========================
-
-load_dotenv()
-
-api_key = os.getenv("GOOGLE_API_KEY")
+api_key = GOOGLE_API_KEY
 if not api_key:
     raise ValueError(
-        "GOOGLE_API_KEY environment variable is not set. "
-        "Please add GOOGLE_API_KEY=your_api_key to your .env file in the backend directory."
+        "GOOGLE_API_KEY environment variable is not set in config."
     )
 
 llm_model = ChatGoogleGenerativeAI(
@@ -242,7 +233,7 @@ def run_pipeline(user_input: str):
         final_courses.append({
             "Credits": credit,
             "Grade": normalized_grade,
-            "Course Name": "",  # Empty placeholder for frontend
+            "Course Name": "",  
             "Course Code": code
         })
 
