@@ -1,7 +1,14 @@
-Flask==2.2.3
-Flask-Cors==3.0.10
-gunicorn==23.0.0
-PyMuPDF==1.25.5
-opencv-python-headless==4.11.0.86
-python-dotenv==1.0.0
-werkzeug==2.2.2  # Fix compatibility issue
+Flask
+Flask-Cors
+gunicorn
+PyMuPDF
+opencv-python-headless
+python-dotenv
+werkzeug
+langchain
+langchain-community
+langchain-core
+langchain-text-splitters
+langchain-google-genai
+langchain-ollama
+faiss-cpu

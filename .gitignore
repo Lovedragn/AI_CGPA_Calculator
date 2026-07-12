@@ -1,0 +1,52 @@
+# Virtual Environment and Python Cache
+.venv/
+venv/
+ENV/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ruff_cache/
+.pytest_cache/
+
+# Local Environment Variables and Secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+backend/.env
+
+# Backend Uploads and Indexes
+backend/uploads/*
+!backend/uploads/.gitkeep
+uploads/
+backend/faiss_index/
+backend/sample.txt
+
+# Node / Frontend Build and Dependencies
+node_modules/
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+.next/
+
+# Graphify Outputs
+graphify-out/
+.graphify_python
+.graphify_root
+
+# System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
