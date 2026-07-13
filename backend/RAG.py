@@ -10,8 +10,7 @@ from langchain_core.prompts import (
 )
 from langchain_core.output_parsers import JsonOutputParser
 
-api_key = GOOGLE_API_KEY
-if not api_key:
+if not GOOGLE_API_KEY:
     raise ValueError(
         "GOOGLE_API_KEY environment variable is not set in config."
     )
@@ -19,12 +18,12 @@ if not api_key:
 llm_model = ChatGoogleGenerativeAI(
     model="gemini-2.5-flash", 
     temperature=0.0,
-    google_api_key=api_key,
+    google_api_key=GOOGLE_API_KEY,
 )
 
 embedding_model = GoogleGenerativeAIEmbeddings(
     model="models/gemini-embedding-001",
-    google_api_key=api_key,
+    google_api_key=GOOGLE_API_KEY,
 )
 
 # Load Credits data for direct exact lookup and fallback indexing

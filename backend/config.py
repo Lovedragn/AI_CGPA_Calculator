@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 
 # Load environment variables dynamically relative to this file
 backend_dir = os.path.dirname(os.path.abspath(__file__))
-prod_env_path = os.path.join("etc/secrets/", ".prod.env")
+prod_env_path = os.path.join("/etc/secrets/", ".prod.env")
 dev_env_path = os.path.join(backend_dir, ".dev.env")
 
 if os.path.exists(prod_env_path):
