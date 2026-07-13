@@ -1,0 +1,38 @@
+# Virtual Environment and Python Cache
+.venv/
+venv/
+ENV/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ruff_cache/
+.pytest_cache/
+
+# Local Environment Variables and Secrets
+.env
+*.env
+.env.development.local
+.env.test.local
+.env.production.local
+backend/.env
+
+# Backend Uploads and Indexes
+backend/uploads/*
+!backend/uploads/.gitkeep
+uploads
+.agents
+
+# System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
