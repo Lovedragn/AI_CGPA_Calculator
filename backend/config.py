@@ -3,13 +3,13 @@ from dotenv import load_dotenv
 
 # Load environment variables dynamically relative to this file
 backend_dir = os.path.dirname(os.path.abspath(__file__))
-prod_env_path = os.path.join(backend_dir, ".prod.env")
+prod_env_path = os.path.join("etc/secrets/", ".prod.env")
 dev_env_path = os.path.join(backend_dir, ".dev.env")
 
 if os.path.exists(prod_env_path):
-    load_dotenv(dotenv_path=prod_env_path)
+    load_dotenv(prod_env_path)
 else:
-    load_dotenv(dotenv_path=dev_env_path)
+    load_dotenv(dev_env_path)
     
 FLASK_PORT=os.getenv("FLASK_PORT")
 UPLOAD_FOLDER=os.getenv("UPLOAD_FOLDER")
