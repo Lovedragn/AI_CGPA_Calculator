@@ -6,7 +6,10 @@ backend_dir = os.path.dirname(os.path.abspath(__file__))
 prod_env_path = os.path.join(backend_dir, ".prod.env")
 dev_env_path = os.path.join(backend_dir, ".dev.env")
 
-load_dotenv(dev_env_path)
+if os.path.exists(prod_env_path):
+    load_dotenv(dotenv_path=prod_env_path)
+else:
+    load_dotenv(dotenv_path=dev_env_path)
     
 FLASK_PORT=os.getenv("FLASK_PORT")
 UPLOAD_FOLDER=os.getenv("UPLOAD_FOLDER")

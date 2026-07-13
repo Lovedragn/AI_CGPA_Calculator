@@ -9,3 +9,5 @@ sample.txt
 .env
 .dev.env
 .prod.env
+
+config.py
