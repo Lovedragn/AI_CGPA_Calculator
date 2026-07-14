@@ -1,7 +1,7 @@
 import os
 import json
 from config import GOOGLE_API_KEY
-from pdf_model import calculate_cgpa
+from GPA_Compute import calculate_cgpa, calculate_total_credits
 from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_core.prompts import (
@@ -152,7 +152,6 @@ extract_chain = (
 def run_pipeline(user_input: str):
     # 1. First AI call: Extract info and raw courses
     extracted = extract_chain.invoke({"user_input": user_input})
-    print("extracted", extracted)
     
     student_info = extracted.get("student_info", {
         "Student_Name": "Unknown",
@@ -194,7 +193,7 @@ def run_pipeline(user_input: str):
 
     # 3. Calculate CGPA using math in Python
     cgpa = calculate_cgpa({"Courses": final_courses})
-    total_credits = sum(course["Credits"] for course in final_courses)
+    total_credits = calculate_total_credits(final_courses)
         
     return {
         "cgpa": cgpa,

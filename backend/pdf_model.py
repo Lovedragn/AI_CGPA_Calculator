@@ -1,7 +1,7 @@
 import fitz  # PyMuPDF
 import re
 import json
-
+from GPA_Compute import calculate_cgpa, calculate_total_credits
 
 def pdf_starter(file_path):
     
@@ -37,7 +37,7 @@ def pdf_starter(file_path):
         "cgpa": final_result,
         "student_info": data["Student Info"],
         "courses": final_courses,
-        "total_credits": sum(course["Credits"] for course in final_courses),
+        "total_credits": calculate_total_credits(final_courses),
         "college": college
     }
 
@@ -178,18 +178,3 @@ def parse_student_data(text):
         "Courses": courses
     }
 
-def calculate_cgpa(final_data):
-
-    calculation = {"O":10, "A+":9, "A":8, "B+":7, "B":6, "C+":5, "C":4, "RA":0}
-    calculation_result=0
-    total_credits = 0
-    for i in range(len(final_data["Courses"])):
-        temp_grade_holder = final_data["Courses"][i]["Grade"]
-        temp_credit_holder = final_data["Courses"][i]["Credits"] 
-        total_credits += temp_credit_holder
-        calculation_result += calculation[temp_grade_holder] * temp_credit_holder
-    if(total_credits == 0):
-        return "NA"
-    final_result =round((calculation_result/total_credits),3)
-    
-    return (str(format(final_result,".2f")))
