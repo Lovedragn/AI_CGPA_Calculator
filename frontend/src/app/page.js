@@ -81,7 +81,7 @@ const App = ({ outerfile }) => {
             <Skeleton className="w-[9rem] h-[9rem] rounded-3xl" />
           ) : (
             <p className="relative z-20 font-thin text-zinc-400 text-sm mt-2 text-center">
-              Upload only GRTIET PDF result <br />
+              Upload images & PDF Result <br />
               For concerns, Mail
               <br />
               <a

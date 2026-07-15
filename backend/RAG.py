@@ -189,7 +189,6 @@ def run_pipeline(user_input: str):
             "Course Name": "",  
             "Course Code": code
         })
-    print(final_courses)
 
     # 3. Calculate CGPA using math in Python
     cgpa = calculate_cgpa({"Courses": final_courses})
