@@ -1,4 +1,5 @@
 import "./globals.css";
+import { Analytics } from '@vercel/analytics/next';
 
 const GOOGLE_VERIFY = process.env.GOOGLE_VERIFY_ID;
 
@@ -62,7 +63,10 @@ export default function RootLayout({ children }) {
           <meta name="google-site-verification" content={GOOGLE_VERIFY} />
         )}
       </head>
-      <body className="bg-black antialiased">{children}</body>
+      <body className="bg-black antialiased">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
